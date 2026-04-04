@@ -2,12 +2,29 @@
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  canonical?: string;
+  noindex?: boolean;
+  article?: boolean;
+  pubDate?: Date;
+  author?: string;
+  tags?: string[];
 }
 
 const { 
   title = "Oberbeck Marketing — Full-Service-Agentur für KMU",
-  description = "Marketing, das funktioniert. Für kleine und mittelständische Unternehmen in Rheinland-Pfalz. Persönlich, verlässlich, messbar."
+  description = "Marketing, das funktioniert. Für kleine und mittelständische Unternehmen in Rheinland-Pfalz. Persönlich, verlässlich, messbar.",
+  image = "https://oberbeck-marketing.de/og-image.jpg",
+  canonical = Astro.url.pathname,
+  noindex = false,
+  article = false,
+  pubDate,
+  author = "Philipp Oberbeck",
+  tags = []
 } = Astro.props;
+
+const siteUrl = "https://oberbeck-marketing.de";
+const canonicalUrl = canonical === "/" ? siteUrl : `${siteUrl}${canonical}`;
 
 import "../styles/global.css";
 ---
@@ -18,9 +35,128 @@ import "../styles/global.css";
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="description" content={description} />
-  <meta name="generator" content={Astro.generator} />
+  
+  <!-- Primary Meta Tags -->
   <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+  <meta name="keywords" content="Marketing Agentur, KMU Marketing, Google Ads, SEO, Webdesign, Rheinland-Pfalz, Laumersheim, Social Media, B2B Marketing" />
+  <meta name="author" content={author} />
+  <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+  <meta name="language" content="de" />
+  <meta name="revisit-after" content="7 days" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href={canonicalUrl} />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content={article ? "article" : "website"} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={image} />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="Oberbeck Marketing" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={canonicalUrl} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={image} />
+  
+  <!-- Article Meta (if blog post) -->
+  {article && pubDate && (
+    <>
+      <meta property="article:published_time" content={pubDate.toISOString()} />
+      <meta property="article:author" content={author} />
+      <meta property="article:section" content="Marketing" />
+      {tags.map((tag) => (
+        <meta property="article:tag" content={tag} />
+      ))}
+    </>
+  )}
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": article ? "BlogPosting" : "WebSite",
+      ...(article && pubDate ? {
+        "headline": title,
+        "description": description,
+        "image": image,
+        "datePublished": pubDate.toISOString(),
+        "dateModified": pubDate.toISOString(),
+        "author": {
+          "@type": "Person",
+          "name": author
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Oberbeck Marketing",
+          "logo": {
+            "@type": "ImageObject",
+            "url": `${siteUrl}/images/obm-logo.svg`
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": canonicalUrl
+        }
+      } : {
+        "name": "Oberbeck Marketing",
+        "url": siteUrl,
+        "description": description,
+        "publisher": {
+          "@type": "Organization",
+          "name": "Oberbeck Marketing",
+          "logo": {
+            "@type": "ImageObject",
+            "url": `${siteUrl}/images/obm-logo.svg`
+          }
+        }
+      })
+    })}
+  </script>
+  
+  <!-- Local Business Schema -->
+  {!article && (
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Oberbeck Marketing",
+        "description": "Full-Service Marketing Agentur für KMU in Rheinland-Pfalz",
+        "url": siteUrl,
+        "telephone": "+4962381234567",
+        "email": "hello@oberbeck-marketing.de",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Hauptstraße 123",
+          "addressLocality": "Laumersheim",
+          "postalCode": "67149",
+          "addressRegion": "Rheinland-Pfalz",
+          "addressCountry": "DE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "49.5667",
+          "longitude": "8.2167"
+        },
+        "openingHours": [
+          "Mo-Fr 09:00-17:00"
+        ],
+        "priceRange": "€€",
+        "sameAs": [
+          "https://linkedin.com/in/oberbeck-marketing",
+          "https://instagram.com/oberbeck.marketing"
+        ]
+      })}
+    </script>
+  )}
+  
+  <meta name="generator" content={Astro.generator} />
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

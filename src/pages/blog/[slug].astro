@@ -20,7 +20,16 @@ const relatedPosts = allPosts
   .slice(0, 2);
 ---
 
-<Layout title={`${post.data.title} — Oberbeck Marketing`} description={post.data.description}>
+<Layout 
+  title={`${post.data.title} — Oberbeck Marketing`} 
+  description={post.data.description}
+  image={post.data.image}
+  canonical={`/blog/${post.id}`}
+  article={true}
+  pubDate={post.data.pubDate}
+  author={post.data.author}
+  tags={post.data.tags}
+>
   <article class="min-h-screen">
     
     {/* Hero Section with Image */}
