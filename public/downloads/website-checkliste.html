@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website-Checkliste für KMU</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background: white;
+        }
+        
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            margin: 0 auto;
+            background: white;
+            position: relative;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #1e3a5f;
+        }
+        
+        .logo {
+            height: 40px;
+        }
+        
+        .header-info {
+            text-align: right;
+            font-size: 11px;
+            color: #64748b;
+        }
+        
+        /* Cover */
+        .cover {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #faf8f5 0%, #ffffff 100%);
+            border-radius: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .cover-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #1e3a5f;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .cover h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        
+        .cover h1 span {
+            color: #1e3a5f;
+        }
+        
+        .cover-subtitle {
+            font-size: 16px;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+        
+        .cover-meta {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 14px;
+            color: #64748b;
+        }
+        
+        .cover-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Content */
+        .content {
+            margin-bottom: 40px;
+        }
+        
+        .intro {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 4px solid #52baeb;
+        }
+        
+        .intro p {
+            font-size: 14px;
+            color: #475569;
+            margin: 0;
+        }
+        
+        /* Section */
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #52baeb 0%, #3a9bd1 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        
+        /* Checklist Item */
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding: 16px;
+            background: #faf8f5;
+            border-radius: 10px;
+            transition: all 0.2s;
+        }
+        
+        .checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid #1e3a5f;
+            border-radius: 5px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .checklist-content {
+            flex: 1;
+        }
+        
+        .checklist-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+        
+        .checklist-desc {
+            font-size: 12px;
+            color: #64748b;
+        }
+        
+        .checklist-example {
+            font-size: 11px;
+            color: #1e3a5f;
+            margin-top: 6px;
+            font-style: italic;
+        }
+        
+        .checklist-example.bad {
+            color: #ef4444;
+        }
+        
+        .checklist-example.good {
+            color: #22c55e;
+        }
+        
+        /* Progress Bar */
+        .progress-section {
+            background: linear-gradient(135deg, #1e3a5f 0%, #152d4a 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin: 40px 0;
+        }
+        
+        .progress-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .progress-bar {
+            background: rgba(255,255,255,0.2);
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, #52baeb 0%, #7acdf0 100%);
+            height: 100%;
+            width: 0%;
+            border-radius: 10px;
+        }
+        
+        .progress-legend {
+            display: flex;
+            justify-content: space-around;
+            font-size: 12px;
+        }
+        
+        .progress-legend-item {
+            text-align: center;
+        }
+        
+        .progress-legend-item .emoji {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #faf8f5 0%, #ffffff 100%);
+            border: 2px solid #1e3a5f;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .cta-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+        
+        .cta-text {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #52baeb 0%, #3a9bd1 100%);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: #64748b;
+        }
+        
+        .footer-contact {
+            text-align: right;
+        }
+        
+        .footer-contact a {
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Print styles */
+        @media print {
+            .page {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <header class="header">
+            <img src="/images/obm-logo.svg" alt="Oberbeck Marketing" class="logo">
+            <div class="header-info">
+                <strong>Kostenlose Checkliste</strong><br>
+                Stand: April 2025
+            </div>
+        </header>
+        
+        <!-- Cover -->
+        <div class="cover">
+            <div class="cover-badge">
+                ✓ 15 Punkte zum Abhaken
+            </div>
+            <h1>Die 5-Minuten-<br><span>Website-Checkliste</span></h1>
+            <p class="cover-subtitle">Ist Ihre Website bereit für 2025?</p>
+            
+            <div class="cover-meta">
+                <div class="cover-meta-item">
+                    📋 Übersichtlich
+                </div>
+                <div class="cover-meta-item">
+                    ⏱️ 5 Minuten
+                </div>
+                <div class="cover-meta-item">
+                    🎯 Sofort umsetzbar
+                </div>
+            </div>
+        </div>
+        
+        <!-- Intro -->
+        <div class="intro">
+            <p><strong>So nutzen Sie diese Checkliste:</strong> Gehen Sie Punkt für Punkt durch. Haken Sie ab, was bereits erledigt ist. Notieren Sie Optimierungspotenziale. Bei unter 12 Punkten: Wir helfen gerne weiter.</p>
+        </div>
+        
+        <!-- Section 1: SEO -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🔍</div>
+                <h2 class="section-title">SEO & Sichtbarkeit</h2>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">1. Seitentitel unter 60 Zeichen</div>
+                    <div class="checklist-desc">Jede Seite braucht einen eindeutigen Titel mit Haupt-Keyword.</div>
+                    <div class="checklist-example bad">✗ "Willkommen"</div>
+                    <div class="checklist-example good">✓ "Sanitär Laumersheim | 24h Notdienst | Müller GmbH"</div>
+                </div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">2. Meta-Beschreibung vorhanden</div>
+                    <div class="checklist-desc">150-160 Zeichen, die zum Klicken animieren.</div>
+                </div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">3. Eine H1 pro Seite</div>
+                    <div class="checklist-desc">Nur eine Hauptüberschrift. Enthält das Keyword.</div>
+                </div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">4. Bilder mit Alt-Texten</div>
+                    <div class="checklist-desc">Jedes Bild beschreibt, was zu sehen ist (nicht "IMG_1234").</div>
+                </div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">5. Mobile-Optimierung</div>
+                    <div class="checklist-desc">Test: Öffnen Sie Ihre Website am Handy. Können Sie problemlos navigieren?</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 2: Design -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">🎨</div>
+                <h2 class="section-title">Design & Vertrauen</h2>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">6. Logo klickbar zur Startseite</div>
+                    <div class="checklist-desc">Standard, aber oft vergessen.</div>
+                </div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">7. Telefonnummer oben rechts sichtbar</div>
+                    <div class="checklist-desc">Nicht verstecken. Nicht erst auf Kontaktseite suchen lassen.</div>
+                </div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">8. Echte Fotos statt Stock-Bilder</div>
+                    <div class="checklist-desc">Ihr Team, Ihre Räume, Ihre Arbeit. Vertrauen schafft Konversion.</div>
+                </div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">9. Testimonials oder Google-Bewertungen</div>
+                    <div class="checklist-desc">Was sagen echte Kunden? Zeigen, nicht nur erzählen.</div>
+                </div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">10. SSL-Zertifikat aktiv (https)</div>
+                    <div class="checklist-desc">Der grüne Schloss-Symbol. Ohne vertrauen Besucher nicht.</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 3: Conversion -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">💬</div>
+                <h2 class="section-title">Conversion & Kontakt</h2>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">11. Jede Seite hat EINEN klaren nächsten Schritt</div>
+                    <div class="checklist-desc">Was soll der Besucher tun? Anrufen? Formular ausfüllen? Termin buchen?</div>
+                </div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">12. Kontaktformular maximal 4 Felder</div>
+                    <div class="checklist-desc">Name, E-Mail, Telefon, Nachricht. Jedes Feld mehr reduziert Abschlüsse um 11%.</div>
+                </div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">13. Ladezeit unter 3 Sekunden</div>
+                    <div class="checklist-desc">Testen Sie mit PageSpeed Insights. Jede Sekunde kostet Besucher.</div>
+                </div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">14. Impressum & Datenschutz aktuell</div>
+                    <div class="checklist-desc">Nicht nur Pflicht — zeigt Professionalität.</div>
+                </div>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <div class="checklist-content">
+                    <div class="checklist-title">15. Call-to-Action über der Fold</div>
+                    <div class="checklist-desc">Der wichtigste Button muss sofort sichtbar sein, ohne zu scrollen.</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Progress Section -->
+        <div class="progress-section">
+            <h3 class="progress-title">📊 So bewerten Sie Ihr Ergebnis</h3>
+            
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            
+            <div class="progress-legend">
+                <div class="progress-legend-item">
+                    <span class="emoji">🚨</span>
+                    <strong>0-6 Punkte</strong><br>
+                    Handlungsbedarf
+                </div>
+                <div class="progress-legend-item">
+                    <span class="emoji">⚠️</span>
+                    <strong>7-9 Punkte</strong><br>
+                    Durchschnitt
+                </div>
+                <div class="progress-legend-item">
+                    <span class="emoji">✅</span>
+                    <strong>10-12 Punkte</strong><br>
+                    Gut
+                </div>
+                <div class="progress-legend-item">
+                    <span class="emoji">🏆</span>
+                    <strong>13-15 Punkte</strong><br>
+                    Exzellent
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="cta-section">
+            <h3 class="cta-title">🎯 Unter 12 Punkte erreicht?</h3>
+            <p class="cta-text">Keine Sorge. Die meisten KMU-Websites sind bei 6-8 Punkten. Wir analysieren Ihre Website kostenlos und zeigen Ihnen die 3 wichtigsten Optimierungen für mehr Anfragen.</p>
+            
+            <a href="https://oberbeck-marketing.de/#kontakt" class="cta-button">
+                📞 Kostenlosen Website-Check anfordern
+            </a>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div>
+                © 2025 Oberbeck Marketing · Alle Rechte vorbehalten
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:hello@oberbeck-marketing.de">hello@oberbeck-marketing.de</a> · 06238 1234567<br>
+                Hauptstraße 123, 67149 Laumersheim
+            </div>
+        </footer>
+        
+    </div>
+</body>
+</html>
