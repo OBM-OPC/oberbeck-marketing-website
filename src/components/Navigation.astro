@@ -20,7 +20,7 @@ const iconPaths: Record<string, string> = {
 
 <nav 
   id="main-nav"
-  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out"
+  class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm transition-all duration-300 ease-out"
   data-scrolled="false"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,7 +96,7 @@ const iconPaths: Record<string, string> = {
   <!-- Mobile Menu - Full Screen -->
   <div 
     id="mobile-menu" 
-    class="lg:hidden fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+    class="lg:hidden fixed inset-0 bg-white dark:bg-slate-900 z-40 transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
   >
     <div class="flex flex-col h-full pt-20 px-6 pb-8">
       
@@ -173,15 +173,15 @@ const iconPaths: Record<string, string> = {
     const isScrolled = window.scrollY > 50;
     
     if (isScrolled) {
-      nav?.classList.add('bg-white/95', 'shadow-lg', 'shadow-slate-900/5', 'backdrop-blur-sm');
+      nav?.classList.add('bg-white/95', 'dark:bg-slate-900/95', 'shadow-lg', 'shadow-slate-900/5', 'backdrop-blur-sm');
       nav?.classList.remove('bg-transparent');
       navInner?.classList.remove('h-20', 'lg:h-24');
       navInner?.classList.add('h-16', 'lg:h-20');
       navLogo?.classList.remove('h-8', 'lg:h-10');
       navLogo?.classList.add('h-6', 'lg:h-8');
     } else {
-      nav?.classList.remove('bg-white/95', 'shadow-lg', 'shadow-slate-900/5', 'backdrop-blur-sm');
-      nav?.classList.add('bg-transparent');
+      nav?.classList.remove('bg-white/95', 'dark:bg-slate-900/95', 'shadow-lg', 'shadow-slate-900/5', 'backdrop-blur-sm');
+      nav?.classList.add('bg-white/80', 'dark:bg-slate-900/80', 'backdrop-blur-sm');
       navInner?.classList.remove('h-16', 'lg:h-20');
       navInner?.classList.add('h-20', 'lg:h-24');
       navLogo?.classList.remove('h-6', 'lg:h-8');
