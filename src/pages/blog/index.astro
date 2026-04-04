@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
 
 const posts = await getCollection('blog');
 const sortedPosts = posts.sort((a: any, b: any) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -17,6 +19,8 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
 ---
 
 <Layout title="Blog — Oberbeck Marketing" description="Praktische Marketing-Tipps für KMU in Rheinland-Pfalz">
+  <Navigation />
+  
   <div class="min-h-screen bg-gradient-to-b from-[#faf8f5] to-white">
     
     {/* Hero Section */}
@@ -195,4 +199,6 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
       </div>
     </section>
   </div>
+  
+  <Footer />
 </Layout>

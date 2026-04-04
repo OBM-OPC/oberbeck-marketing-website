@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -30,6 +32,8 @@ const relatedPosts = allPosts
   author={post.data.author}
   tags={post.data.tags}
 >
+  <Navigation />
+  
   <article class="min-h-screen">
     
     {/* Hero Section with Image */}
@@ -242,6 +246,8 @@ const relatedPosts = allPosts
       </div>
     </section>
   </article>
+  
+  <Footer />
 </Layout>
 
 <style>

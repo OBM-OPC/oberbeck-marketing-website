@@ -1,0 +1,34 @@
+name: Content Draft Reminder
+
+on:
+  schedule:
+    # Run Monday and Thursday at 9:00 AM CET
+    - cron: '0 8 * * 1,4'
+  workflow_dispatch:
+
+jobs:
+  send-draft-reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Telegram notification
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: |
+            📝 **CONTENT DRAFTS READY**
+
+            Hallo Philipp! 
+
+            Die neuen Blog-Drafts sind bereit. 
+            
+            Bitte antworte mit:
+            • "Go 1" - für Draft 1
+            • "Go 2" - für Draft 2  
+            • "Go 1+2" - für beide
+            • "No" - keine Veröffentlichung
+
+            ⏰ Deadline: 60 Minuten
+            
+            ---
+            _Oberbeck Marketing Content System_
