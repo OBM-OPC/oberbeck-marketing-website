@@ -160,6 +160,35 @@ import CookieConsent from '../components/CookieConsent.astro';
   
   <meta name="generator" content={Astro.generator} />
   
+  <!-- Smooth Scroll -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Skip to content link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #1e3a5f;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+    
+    /* Focus visible styles */
+    *:focus-visible {
+      outline: 2px solid #52baeb;
+      outline-offset: 2px;
+    }
+  </style>
+  
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPY5DM3XFF"></script>
   <script>
@@ -257,6 +286,8 @@ import CookieConsent from '../components/CookieConsent.astro';
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="antialiased overflow-x-hidden">
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+  
   <slot />
   
   <CookieConsent />
