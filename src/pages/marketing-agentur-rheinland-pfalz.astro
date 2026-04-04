@@ -1,0 +1,259 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Marketing Agentur Rheinland-Pfalz | Oberbeck Marketing";
+const description = "Ihre Marketing-Agentur für Rheinland-Pfalz: Ludwigshafen, Mannheim, Grünstadt, Frankenthal, Bad Dürkheim, Worms. Strategie, Webdesign, Google Ads, SEO.";
+
+const regions = [
+  { name: "Laumersheim", type: "Stadtteil", focus: "Hauptsitz" },
+  { name: "Ludwigshafen", type: "Großstadt", focus: "B2B Marketing" },
+  { name: "Mannheim", type: "Großstadt", focus: "E-Commerce" },
+  { name: "Grünstadt", type: "Stadt", focus: "Handwerk" },
+  { name: "Frankenthal", type: "Stadt", focus: "Mittelstand" },
+  { name: "Bad Dürkheim", type: "Kreisstadt", focus: "Tourismus & Gastronomie" },
+  { name: "Worms", type: "Großstadt", focus: "Industrie & Handel" }
+];
+
+const services = [
+  {
+    icon: "strategy",
+    title: "Marketing-Strategie",
+    description: "Analyse, Planung, Umsetzung. Wir entwickeln die perfekte Strategie für Ihren Markt in Rheinland-Pfalz."
+  },
+  {
+    icon: "design", 
+    title: "Webdesign",
+    description: "Websites, die verkaufen. Optimiert für lokale Suchen in Ludwigshafen, Mannheim und Umgebung."
+  },
+  {
+    icon: "performance",
+    title: "Google Ads",
+    description: "Lokale Kampagnen für maximale Reichweite in Ihrer Region. Messbare Erfolge, transparente Kosten."
+  },
+  {
+    icon: "seo",
+    title: "SEO",
+    description: "Gefunden werden in Ludwigshafen, Mannheim, Grünstadt. Lokale SEO für regionale Sichtbarkeit."
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <Navigation />
+  
+  <div class="min-h-screen bg-gradient-to-b from-[#faf8f5] to-white">
+    
+    {/* Hero */}
+    <section class="pt-32 pb-16 relative overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#52baeb]/5 rounded-full blur-[100px] pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <nav class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+          <a href="/" class="hover:text-[#1e3a5f] transition-colors">Startseite</a>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-[#1e3a5f] font-medium">Region Rheinland-Pfalz</span>
+        </nav>
+        
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Ihre Regionale Marketing-Agentur</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-6 leading-tight">
+              Marketing für <span class="text-[#1e3a5f]">Rheinland-Pfalz</span>
+            </h1>
+            <p class="text-xl text-[#64748b] mb-8">
+              Von Laumersheim aus betreuen wir Unternehmen in <strong>Ludwigshafen, Mannheim, Grünstadt, Frankenthal, Bad Dürkheim</strong> und <strong>Worms</strong>. 
+              Persönlich, erreichbar, mit lokalem Marktverständnis.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/#kontakt" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#52baeb] to-[#3a9bd1] text-white font-semibold rounded-xl transition-all hover:scale-105">
+                Erstgespräch vereinbaren
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+              <a href="tel:+4915228875801" class="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1e3a5f] font-semibold rounded-xl border-2 border-[#1e3a5f]/10 hover:border-[#1e3a5f]/30 transition-all">
+                +49 152 28875801
+              </a>
+            </div>
+          </div>
+          
+          {/* Regionen Visualisierung */}
+          <div class="bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
+            <h2 class="text-xl font-bold text-[#1a1a1a] mb-6">Unsere Regionen</h2>
+            <div class="space-y-3">
+              {regions.map((region) => (
+                <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl hover:bg-[#52baeb]/5 transition-colors">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-[#1e3a5f] rounded-lg flex items-center justify-center text-white text-sm font-bold">
+                      {region.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p class="font-semibold text-[#1a1a1a]">{region.name}</p>
+                      <p class="text-xs text-slate-500">{region.type}</p>
+                    </div>
+                  </div>
+                  <span class="text-xs bg-[#52baeb]/10 text-[#1e3a5f] px-2 py-1 rounded-full">{region.focus}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Services spezialisiert */}
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Lokale Expertise</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-6">
+            Marketing, das Ihre Region versteht
+          </h2>
+          <p class="text-lg text-[#64748b]">
+            Jedes Bundesland, jede Stadt hat ihre Eigenheiten. Wir kennen die lokale Wirtschaft in Rheinland-Pfalz 
+            und passen unsere Strategien gezielt an.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service) => (
+            <div class="bg-[#faf8f5] rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
+              <div class="w-12 h-12 bg-gradient-to-br from-[#1e3a5f] to-[#52baeb] rounded-xl flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-[#1a1a1a] mb-2">{service.title}</h3>
+              <p class="text-sm text-[#64748b]">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Warum lokale Agentur */}
+    <section class="py-20 bg-gradient-to-br from-[#1e3a5f] to-[#152d4a]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Warum eine lokale Agentur?
+            </h2>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 bg-[#52baeb] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white mb-1">Vor Ort erreichbar</h3>
+                  <p class="text-slate-300">In Laumersheim, 20 Minuten von Ludwigshafen. Persönliche Besprechungen jederzeit möglich.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 bg-[#52baeb] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white mb-1">Lokales Netzwerk</h3>
+                  <p class="text-slate-300">Wir kennen die Wirtschaft in Rheinland-Pfalz: Von Handwerk über Industrie bis Tourismus.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 bg-[#52baeb] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white mb-1">Regionale Keywords</h3>
+                  <p class="text-slate-300">Wir optimieren für lokale Suchen: 'Marketing Agentur Ludwigshafen', 'Webdesign Mannheim'.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+            <blockquote class="text-2xl text-white font-light italic mb-6">
+              "Als lokale Agentur verstehen wir die Herausforderungen von KMU in Rheinland-Pfalz. Wir sprechen die Sprache unserer Kunden."
+            </blockquote>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-[#52baeb] to-[#3a9bd1] rounded-full flex items-center justify-center">
+                <span class="text-xl font-bold text-white">PO</span>
+              </div>
+              <div>
+                <p class="font-semibold text-white">Philipp Oberbeck</p>
+                <p class="text-slate-300">Geschäftsführer, Oberbeck Marketing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section class="py-20 bg-[#faf8f5]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-4">
+          Bereit für lokales Marketing?
+        </h2>
+        <p class="text-lg text-[#64748b] mb-8">
+          Ob in Ludwigshafen, Mannheim oder einer der kleineren Städte in der Region — 
+          wir bringen Ihr Marketing auf den nächsten Level.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#kontakt" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#52baeb] to-[#3a9bd1] text-white font-semibold rounded-xl transition-all hover:scale-105 shadow-xl shadow-[#52baeb]/25">
+            Kostenloses Erstgespräch
+          </a>
+          <a href="/faq" class="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1e3a5f] font-semibold rounded-xl border-2 border-[#1e3a5f]/10 hover:border-[#1e3a5f]/30 transition-all">
+            Fragen & Antworten
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* Schema Markup */}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://oberbeck-marketing.de/#rheinland-pfalz",
+        "name": "Oberbeck Marketing - Rheinland-Pfalz",
+        "description": "Marketing Agentur für Ludwigshafen, Mannheim, Grünstadt, Frankenthal, Bad Dürkheim, Worms und Umgebung",
+        "url": "https://oberbeck-marketing.de/marketing-agentur-rheinland-pfalz",
+        "telephone": "+49 152 28875801",
+        "areaServed": [
+          {"@type": "City", "name": "Ludwigshafen am Rhein"},
+          {"@type": "City", "name": "Mannheim"},
+          {"@type": "City", "name": "Grünstadt"},
+          {"@type": "City", "name": "Frankenthal"},
+          {"@type": "City", "name": "Bad Dürkheim"},
+          {"@type": "City", "name": "Worms"},
+          {"@type": "State", "name": "Rheinland-Pfalz"}
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Marketing für Rheinland-Pfalz",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lokales Marketing Ludwigshafen"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO Mannheim"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Webdesign Grünstadt"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Google Ads Frankenthal"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Marketing Bad Dürkheim"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Social Media Worms"}}
+          ]
+        }
+      }
+    </script>
+  </div>
+  
+  <Footer />
+</Layout>

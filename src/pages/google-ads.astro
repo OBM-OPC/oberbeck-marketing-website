@@ -1,0 +1,215 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Google Ads Agentur Ludwigshafen & Mannheim | Oberbeck Marketing";
+const description = "Professionelles Google Ads Management für KMU in Ludwigshafen, Mannheim und Rheinland-Pfalz. Messbare Ergebnisse, transparente Kosten. Zertifiziert.";
+
+const benefits = [
+  {
+    icon: "target",
+    title: "Sofort sichtbar",
+    description: "Ihre Anzeigen erscheinen noch heute über den organischen Suchergebnissen. Kein Warten auf SEO-Erfolge."
+  },
+  {
+    icon: "control",
+    title: "Volle Kontrolle",
+    description: "Bestimmen Sie selbst, wie viel Sie ausgeben möchten. Flexible Budgets, die Sie jederzeit anpassen können."
+  },
+  {
+    icon: "measure",
+    title: "Messbarer ROI",
+    description: "Jeder Klick, jede Conversion wird getrackt. Sie wissen genau, welche Kampagnen verkaufen."
+  },
+  {
+    icon: "local",
+    title: "Lokales Targeting",
+    description: "Zeigen Sie Anzeigen nur in Ihrer Region: Ludwigshafen, Mannheim, Grünstadt, Frankenthal."
+  }
+];
+
+const process = [
+  { step: "1", title: "Analyse", description: "Wir analysieren Ihre Ziele, Zielgruppe und Wettbewerber" },
+  { step: "2", title: "Strategie", description: "Keyword-Recherche, Anzeigentexte, Landing Pages" },
+  { step: "3", title: "Setup", description: "Professioneller Kampagnen-Aufbau mit Tracking" },
+  { step: "4", title: "Optimierung", description: "Laufendes A/B-Testing, Budget-Optimierung" }
+];
+---
+
+<Layout title={title} description={description}>
+  <Navigation />
+  
+  <div class="min-h-screen bg-gradient-to-b from-[#faf8f5] to-white">
+    
+    {/* Hero */}
+    <section class="pt-32 pb-16 relative overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#52baeb]/5 rounded-full blur-[100px] pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        
+        <nav class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+          <a href="/" class="hover:text-[#1e3a5f] transition-colors">Startseite</a>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-[#1e3a5f] font-medium">Google Ads</span>
+        </nav>
+        
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-flex items-center gap-2 px-4 py-2 bg-[#4285F4]/10 rounded-full text-sm font-medium text-[#4285F4] mb-6">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+              Google Partner zertifiziert
+            </span>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-6 leading-tight">
+              Google Ads für <span class="text-[#4285F4]">Ludwigshafen</span> & Umgebung
+            </h1>
+            
+            <p class="text-xl text-[#64748b] mb-8">
+              Professionelles Kampagnen-Management für KMU in Rheinland-Pfalz. 
+              Maximale Sichtbarkeit, messbare Conversions, faire Preise.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/#kontakt" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#4285F4] to-[#3367D6] text-white font-semibold rounded-xl transition-all hover:scale-105 shadow-xl shadow-[#4285F4]/25">
+                Kostenloses Ads-Audit
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+              <a href="tel:+4915228875801" class="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1e3a5f] font-semibold rounded-xl border-2 border-[#1e3a5f]/10 hover:border-[#1e3a5f]/30 transition-all">
+                +49 152 28875801
+              </a>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
+            <h3 class="text-lg font-semibold text-[#1a1a1a] mb-6">Typische Ergebnisse</h3>
+            
+            <div class="space-y-4">
+              <div class="flex justify-between items-center p-4 bg-green-50 rounded-xl">
+                <span class="text-slate-700">Cost-per-Lead</span>
+                <span class="text-2xl font-bold text-green-600">-40%</span>
+              </div>
+              <div class="flex justify-between items-center p-4 bg-blue-50 rounded-xl">
+                <span class="text-slate-700">Conversion-Rate</span>
+                <span class="text-2xl font-bold text-blue-600">+85%</span>
+              </div>
+              <div class="flex justify-between items-center p-4 bg-purple-50 rounded-xl">
+                <span class="text-slate-700">Reichweite</span>
+                <span class="text-2xl font-bold text-purple-600">+250%</span>
+              </div>
+            </div>
+            
+            <p class="text-sm text-slate-500 mt-4 text-center">Durchschnittliche Ergebnisse nach 3 Monaten</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Benefits */}
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Vorteile</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-6">Warum Google Ads?</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {benefits.map((benefit) => (
+            <div class="bg-[#faf8f5] rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div class="w-14 h-14 bg-gradient-to-br from-[#4285F4] to-[#34A853] rounded-xl flex items-center justify-center mx-auto mb-4">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-[#1a1a1a] mb-2">{benefit.title}</h3>
+              <p class="text-sm text-[#64748b]">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Process */}
+    <section class="py-20 bg-gradient-to-br from-[#1e3a5f] to-[#152d4a]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+          <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Unser Prozess</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">So arbeiten wir</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {process.map((step) => (
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <div class="w-12 h-12 bg-[#52baeb] rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
+                {step.step}
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">{step.title}</h3>
+              <p class="text-slate-300">{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section class="py-20 bg-[#faf8f5]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-4">Bereit für mehr Leads?</h2>
+        
+        <p class="text-lg text-[#64748b] mb-8">
+          In einem kostenlosen Audit analysieren wir Ihre aktuellen Kampagnen 
+          und zeigen Potenziale auf.
+        </p>
+        
+        <a href="/#kontakt" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#4285F4] to-[#3367D6] text-white font-semibold rounded-xl transition-all hover:scale-105 shadow-xl shadow-[#4285F4]/25">
+          Jetzt Audit anfordern
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    {/* Schema Markup */}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Google Ads Management Rheinland-Pfalz",
+        "description": "Professionelles Google Ads Management für KMU in Ludwigshafen, Mannheim und Umgebung",
+        "provider": {
+          "@id": "https://oberbeck-marketing.de/#organization"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Ludwigshafen"},
+          {"@type": "City", "name": "Mannheim"},
+          {"@type": "State", "name": "Rheinland-Pfalz"}
+        ],
+        "serviceType": "Google Ads Management",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Google Ads Services",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Search Ads"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Display Ads"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "YouTube Ads"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Remarketing"}}
+          ]
+        }
+      }
+    </script>
+  </div>
+  
+  <Footer />
+</Layout>

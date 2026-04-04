@@ -1,0 +1,175 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Marketing Glossar | Begriffe einfach erklärt | Oberbeck Marketing";
+const description = "Alle wichtigen Marketing-Begriffe verständlich erklärt: SEO, Google Ads, Conversion, ROI, KPI und mehr. Für Unternehmer in Rheinland-Pfalz.";
+
+const glossarEntries = [
+  {
+    term: "SEO (Search Engine Optimization)",
+    short: "Suchmaschinenoptimierung",
+    explanation: "Maßnahmen, um in der organischen (kostenlosen) Google-Suche besser zu ranken. Ziel: Auf Seite 1 bei relevanten Suchbegriffen erscheinen. Dazu gehören Technische SEO, Content und Backlinks.",
+    relevance: "Langfristig, nachhaltig, kostenlos nach der Investition"
+  },
+  {
+    term: "SEA (Search Engine Advertising)",
+    short: "Suchmaschinenwerbung",
+    explanation: "Bezahlte Anzeigen in Google (Google Ads). Sie erscheinen über den organischen Ergebnissen. Man zahlt pro Klick (PPC). Ideal für schnelle Ergebnisse und kontrolliertes Budget.",
+    relevance: "Sofort sichtbar, flexibles Budget, messbar"
+  },
+  {
+    term: "Conversion",
+    short: "Umwandlung",
+    explanation: "Wenn ein Website-Besucher eine gewünschte Aktion ausführt: Kontaktformular abschicken, anrufen, kaufen, Newsletter anmelden. Die Conversion-Rate zeigt, wie viele Besucher konvertieren.",
+    relevance: "Wichtigste Metrik für Website-Erfolg"
+  },
+  {
+    term: "CTA (Call-to-Action)",
+    short: "Handlungsaufforderung",
+    explanation: "Ein Button oder Link, der Besucher zu einer bestimmten Aktion auffordert. Beispiele: 'Jetzt anfragen', 'Kostenloses Gespräch buchen', 'Mehr erfahren'. Gute CTAs steigern Conversions.",
+    relevance: "Entscheidend für Leads und Verkäufe"
+  },
+  {
+    term: "Landing Page",
+    short: "Zielseite",
+    explanation: "Eine spezialisierte Seite für ein bestimmtes Angebot oder Keyword. Optimiert auf eine Aktion (z.B. Anfrage senden). Ohne Ablenkungen, maximal fokussiert auf Conversion.",
+    relevance: "5-10x höhere Conversion als Homepage"
+  },
+  {
+    term: "ROI (Return on Investment)",
+    short: "Return on Investment",
+    explanation: "Die Rendite einer Investition. Bei Marketing: Wie viel Umsatz/Gewinn wurde durch die Marketing-Ausgaben generiert? Formel: (Gewinn - Kosten) / Kosten x 100 = ROI %",
+    relevance: "Zeigt, ob Marketing sich rechnet"
+  },
+  {
+    term: "KPI (Key Performance Indicator)",
+    short: "Kennzahl",
+    explanation: "Messgrößen für Erfolg. Beispiele: Website-Besucher, Conversion-Rate, Cost-per-Lead, Google-Ranking, Social Media Engagement. Ohne KPIs kein Controlling möglich.",
+    relevance: "Steuerung und Optimierung von Kampagnen"
+  },
+  {
+    term: "Lead",
+    short: "Interessent",
+    explanation: "Ein potenzieller Kunde, der Interesse gezeigt hat: z.B. per Formular, Anruf oder E-Mail. Marketing-Ziel: Aus Besuchern Leads machen, aus Leads Kunden.",
+    relevance: "Grundlage für Verkaufsgespräche"
+  },
+  {
+    term: "Content Marketing",
+    short: "Inhaltsmarketing",
+    explanation: "Wertvolle Inhalte erstellen (Blog, Videos, Downloads), die Zielgruppen bei ihren Problemen helfen. Ziel: Vertrauen aufbauen, als Experte positionieren, organisch gefunden werden.",
+    relevance: "Nachhaltige Kundengewinnung, SEO-Boost"
+  },
+  {
+    term: "Retargeting",
+    short: "Werbung für Zurückkehrende",
+    explanation: "Werbung für Personen, die schon auf der Website waren. Beispiel: Besucher sieht Produkt, verlässt Seite, sieht später Anzeige auf Facebook. Erinnert an das Interesse.",
+    relevance: "Erhöht Conversion-Rate um 70-150%"
+  },
+  {
+    term: "Local SEO",
+    short: "Lokale Suchmaschinenoptimierung",
+    explanation: "Optimierung für lokale Suchen wie 'Marketing Agentur Ludwigshafen'. Wichtig: Google Business Profil, lokale Keywords, NAP-Konsistenz (Name, Adresse, Telefon).",
+    relevance: "Essentiell für lokale Unternehmen"
+  },
+  {
+    term: "Bounce Rate",
+    short: "Absprungrate",
+    explanation: "Anteil der Besucher, die nach nur einer Seite wieder gehen. Hohe Bounce Rate (>70%) deutet auf Probleme: langsame Ladezeit, falsche Erwartungen, schlechte UX.",
+    relevance: "Qualitätsindikator für Website"
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <Navigation />
+  
+  <div class="min-h-screen bg-gradient-to-b from-[#faf8f5] to-white">
+    
+    {/* Hero */}
+    <section class="pt-32 pb-16 relative overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#52baeb]/5 rounded-full blur-[100px] pointer-events-none"></div>
+      
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        
+        <nav class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+          <a href="/" class="hover:text-[#1e3a5f] transition-colors">Startseite</a>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-[#1e3a5f] font-medium">Glossar</span>
+        </nav>
+        
+        <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Marketing-Wissen</span>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-6 leading-tight">
+          Marketing-<span class="text-[#1e3a5f]">Begriffe</span> verständlich erklärt
+        </h1>
+        
+        <p class="text-xl text-[#64748b] max-w-2xl">
+          SEO, Conversion, ROI, KPI — die wichtigsten Fachbegriffe einfach und praxisnah erklärt. 
+          Ohne Buzzwords, ohne Floskeln.
+        </p>
+      </div>
+    </section>
+
+    {/* Glossar Grid */}
+    <section class="pb-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid gap-6">
+          {glossarEntries.map((entry) => (
+            <article class="bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+              <div class="flex flex-col lg:flex-row lg:items-start gap-4">
+                <div class="flex-1">
+                  <h2 class="text-xl font-bold text-[#1a1a1a] mb-1">{entry.term}</h2>
+                  <span class="inline-block text-sm text-[#52baeb] font-medium mb-3">{entry.short}</span>
+                  
+                  <p class="text-[#64748b] leading-relaxed mb-4">{entry.explanation}</p>
+                  
+                  <div class="flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-slate-600">{entry.relevance}</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* Schema Markup */}
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "DefinedTermSet",
+            "name": "Marketing Glossar - Oberbeck Marketing",
+            "description": "Verständliche Erklärungen wichtiger Marketing-Begriffe für Unternehmer",
+            "hasDefinedTerm": [
+              {glossarEntries.map(entry => ({
+                "@type": "DefinedTerm",
+                "name": entry.term,
+                "description": entry.explanation
+              }))}
+            ]
+          }
+        </script>
+
+        {/* CTA */}
+        <div class="mt-16 text-center">
+          <p class="text-slate-600 mb-4">Noch Fragen zu einem Begriff?</p>
+          <a href="/#kontakt" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#52baeb] to-[#3a9bd1] text-white font-semibold rounded-xl transition-all hover:scale-105">
+            Wir erklären es gerne persönlich
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <Footer />
+</Layout>
