@@ -20,16 +20,6 @@ body {
   color: var(--color-charcoal);
 }
 
-/* Headlines - Clash Display */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Clash Display', system-ui, sans-serif;
-}
-
-/* Keep Inter for UI elements */
-.nav-link, .button, .tag, .badge {
-  font-family: 'Inter', system-ui, sans-serif;
-}
-
 /* Custom animations */
 @keyframes fade-up {
   from {
