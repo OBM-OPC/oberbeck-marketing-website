@@ -56,7 +56,7 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
             
             {/* Featured Post (first/latest) */}
             <div class="lg:col-span-2 lg:row-span-2">
-              <a href={`/blog/${sortedPosts[0].slug}`} class="group block h-full">
+              <a href={`/blog/${sortedPosts[0].id}`} class="group block h-full">
                 <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
                   <div class="relative aspect-[16/10] overflow-hidden">
                     <img 
@@ -116,7 +116,7 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
             {/* Regular Posts */}
             <div class="contents">
               {sortedPosts.slice(1).map((post: any) => (
-                <a href={`/blog/${post.slug}`} class="group block">
+                <a href={`/blog/${post.id}`} class="group block">
                   <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
                     <div class="relative aspect-[16/9] overflow-hidden">
                       <img 
