@@ -158,6 +158,65 @@ import "../styles/global.css";
   
   <meta name="generator" content={Astro.generator} />
   
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPY5DM3XFF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EPY5DM3XFF', {
+      'send_page_view': true,
+      'anonymize_ip': true
+    });
+    
+    // Custom event tracking helper
+    window.trackEvent = function(eventName, params) {
+      gtag('event', eventName, params || {});
+    };
+  </script>
+  
+  <!-- Event Tracking Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Track CTA button clicks
+      document.querySelectorAll('a[href*="kontakt"], a[href*="#kontakt"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (window.trackEvent) {
+            window.trackEvent('cta_click', {
+              'location': link.closest('section')?.id || 'header',
+              'text': link.textContent?.trim()
+            });
+          }
+        });
+      });
+      
+      // Track PDF downloads
+      document.querySelectorAll('a[href$=".pdf"], a[download]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (window.trackEvent) {
+            window.trackEvent('file_download', {
+              'file_name': link.getAttribute('href')?.split('/').pop(),
+              'file_extension': 'pdf'
+            });
+          }
+        });
+      });
+      
+      // Track outbound links
+      document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+        if (!link.href.includes('oberbeck-marketing')) {
+          link.addEventListener('click', function() {
+            if (window.trackEvent) {
+              window.trackEvent('outbound_click', {
+                'url': link.href
+              });
+            }
+          });
+        }
+      });
+    });
+  </script>
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
