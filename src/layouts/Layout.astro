@@ -27,6 +27,8 @@ const siteUrl = "https://oberbeck-marketing.de";
 const canonicalUrl = canonical === "/" ? siteUrl : `${siteUrl}${canonical}`;
 
 import "../styles/global.css";
+import CookieConsent from '../components/CookieConsent.astro';
+
 ---
 
 <!doctype html>
@@ -256,6 +258,9 @@ import "../styles/global.css";
 </head>
 <body class="antialiased overflow-x-hidden">
   <slot />
+  
+  <CookieConsent />
+  
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     if (window.netlifyIdentity) {
