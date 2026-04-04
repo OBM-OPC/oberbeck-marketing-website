@@ -10,6 +10,13 @@
   --color-slate: #64748b;
 }
 
+/* Dark Mode Variables */
+.dark {
+  --color-warm-white: #0f172a;
+  --color-charcoal: #f8fafc;
+  --color-slate: #94a3b8;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,6 +25,7 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: var(--color-warm-white);
   color: var(--color-charcoal);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Custom animations */
@@ -72,6 +80,10 @@ body {
   pointer-events: none;
 }
 
+.dark .diagonal-bg::before {
+  background: linear-gradient(135deg, rgba(82, 186, 235, 0.05) 0%, transparent 50%);
+}
+
 /* Trust badge glow */
 .trust-badge {
   box-shadow: 0 4px 20px rgba(82, 186, 235, 0.4);
@@ -85,6 +97,10 @@ body {
 .service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(82, 186, 235, 0.15);
+}
+
+.dark .service-card:hover {
+  box-shadow: 0 20px 40px rgba(82, 186, 235, 0.1);
 }
 
 /* Star rating */
@@ -127,6 +143,8 @@ img[loading="lazy"].loaded {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -142,4 +160,17 @@ img[loading="lazy"].loaded {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent);
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }
