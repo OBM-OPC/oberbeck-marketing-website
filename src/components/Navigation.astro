@@ -22,8 +22,8 @@ const navItems = [
       <a href="/" class="flex items-center group">
         <img 
           src="/images/obm-logo.svg" 
-          alt="Oberbeck Marketing Logo" 
-          class="h-4 lg:h-5 w-auto transition-all duration-300 group-hover:scale-105"
+          alt="Oberbeck Marketing" 
+          class="h-8 lg:h-10 w-auto transition-all duration-300 group-hover:scale-105"
           id="nav-logo"
         />
       </a>
@@ -45,7 +45,7 @@ const navItems = [
       {/* Right: CTA */}
       <div class="flex items-center gap-4">
         <a 
-          href="#kontakt" 
+          href="/#kontakt" 
           class="hidden sm:inline-flex px-5 py-2.5 bg-gradient-to-r from-[#52baeb] to-[#3a9bd1] hover:from-[#3a9bd1] hover:to-[#2d8bc0] text-white text-sm font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-[#52baeb]/25"
         >
           Erstgespräch buchen
@@ -105,7 +105,7 @@ const navItems = [
       {/* Mobile CTA */}
       <div class="p-4 border-t border-slate-100">
         <a 
-          href="#kontakt" 
+          href="/#kontakt" 
           class="block w-full px-5 py-3 bg-gradient-to-r from-[#52baeb] to-[#3a9bd1] hover:from-[#3a9bd1] hover:to-[#2d8bc0] text-white text-center font-semibold rounded-lg transition-colors mobile-nav-link"
         >
           Erstgespräch buchen
@@ -141,8 +141,8 @@ const navItems = [
       navInner?.classList.remove('h-20', 'lg:h-24');
       navInner?.classList.add('h-16', 'lg:h-20');
       if (navLogo) {
-        navLogo.classList.remove('h-4', 'lg:h-5');
-        navLogo.classList.add('h-3.5', 'lg:h-4');
+        navLogo.classList.remove('h-8', 'lg:h-10');
+        navLogo.classList.add('h-6', 'lg:h-8');
       }
     } else {
       nav?.classList.remove('bg-white/95', 'shadow-lg', 'shadow-slate-900/5');
@@ -150,8 +150,8 @@ const navItems = [
       navInner?.classList.remove('h-16', 'lg:h-20');
       navInner?.classList.add('h-20', 'lg:h-24');
       if (navLogo) {
-        navLogo.classList.remove('h-3.5', 'lg:h-4');
-        navLogo.classList.add('h-4', 'lg:h-5');
+        navLogo.classList.remove('h-6', 'lg:h-8');
+        navLogo.classList.add('h-8', 'lg:h-10');
       }
     }
     
