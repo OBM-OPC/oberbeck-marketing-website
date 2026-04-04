@@ -1,0 +1,109 @@
+---
+const services = [
+  {
+    title: "Strategie",
+    description: "Keine Aktion ohne Plan. Wir analysieren Ihre Ziele, Ihre Zielgruppe und Ihren Markt — und entwickeln eine Marketing-Strategie, die funktioniert.",
+    icon: "strategy",
+    features: ["Marktanalyse", "Zielgruppen-Definition", "Wettbewerbs-Check", "Kanal-Strategie"]
+  },
+  {
+    title: "Design",
+    description: "Visuelle Identität, die bleibt. Von Logo bis Website: Wir gestalten Ihre Marke so, dass sie professionell und einprägsam wirkt.",
+    icon: "design",
+    features: ["Corporate Design", "Webdesign", "Social Media Assets", "Print-Materialien"]
+  },
+  {
+    title: "Performance",
+    description: "Datengetriebenes Marketing für echte Ergebnisse. Google Ads, SEO, Conversion-Optimierung — alles mit messbarem ROI.",
+    icon: "performance",
+    features: ["Google Ads", "SEO & Content", "Conversion-Optimierung", "Analytics & Tracking"]
+  },
+  {
+    title: "Social Media",
+    description: "Da sein, wo Ihre Kunden sind. Wir bauen Ihre Social-Media-Präsenz auf — authentisch, konsistent und zielgruppenorientiert.",
+    icon: "social",
+    features: ["Content-Strategie", "Community Management", "Paid Social", "Influencer-Kooperationen"]
+  },
+  {
+    title: "Web",
+    description: "Websites, die verkaufen. Schnell, mobil-optimiert und auf Conversion ausgerichtet. Von der Landing Page bis zum Shop.",
+    icon: "web",
+    features: ["Landing Pages", "Business Websites", "E-Commerce", "Website-Relaunch"]
+  },
+  {
+    title: "Entwicklung",
+    description: "Technische Lösungen für komplexe Anforderungen. Custom Plugins, Automation, API-Integrationen — wir machen's möglich.",
+    icon: "dev",
+    features: ["Custom Plugins", "API-Integrationen", "Automation", "Tech-Consulting"]
+  }
+];
+
+const iconPaths: Record<string, string> = {
+  strategy: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+  design: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01",
+  performance: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
+  social: "M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z",
+  web: "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9",
+  dev: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+};
+---
+
+<section id="leistungen" class="py-20 lg:py-32 bg-[#faf8f5]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block text-sm font-semibold text-[#f59e0b] uppercase tracking-wider mb-4">Leistungen</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a1a] mb-6">
+        Alles aus einer Hand
+      </h2>
+      <p class="text-lg text-[#64748b]">
+        Von der Strategie bis zur technischen Umsetzung — ich begleite Ihr Marketing auf allen Ebenen. 
+        Kein outsourcen, keine Abstimmung mit Dritten.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {services.map((service, index) => (
+        <div class="service-card bg-white rounded-2xl p-6 lg:p-8 shadow-lg shadow-slate-900/5 border border-slate-100 group">
+          <!-- Icon -->
+          <div class="w-14 h-14 bg-[#1e3a5f] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#f59e0b] transition-colors duration-300">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={iconPaths[service.icon]} />
+            </svg>
+          </div>
+
+          <!-- Content -->
+          <h3 class="text-xl font-bold text-[#1a1a1a] mb-3">{service.title}</h3>
+          <p class="text-[#64748b] mb-6 leading-relaxed">{service.description}</p>
+
+          <!-- Features -->
+          <ul class="space-y-2">
+            {service.features.map((feature) => (
+              <li class="flex items-center gap-2 text-sm text-[#64748b]">
+                <svg class="w-4 h-4 text-[#f59e0b] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-16 text-center">
+      <a 
+        href="#kontakt"
+        class="inline-flex items-center justify-center px-8 py-4 bg-[#1e3a5f] hover:bg-[#152d4a] text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl shadow-slate-900/20"
+      >
+        Unverbindliches Erstgespräch vereinbaren
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
