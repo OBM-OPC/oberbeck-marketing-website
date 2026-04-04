@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OAuth Callback</title>
+  </head>
+  <body>
+    <script>
+      // OAuth callback handler for Decap CMS
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get('code');
+      
+      if (code) {
+        // Send the code back to the CMS
+        window.opener.postMessage({
+          type: 'oauth',
+          code: code,
+          state: params.get('state')
+        }, '*');
+        
+        // Close this window
+        window.close();
+      } else {
+        document.body.innerHTML = '<p>Authorization successful. You can close this window.</p>';
+      }
+    </script>
+    <p>Processing authorization...</p>
+  </body>
+</html>
