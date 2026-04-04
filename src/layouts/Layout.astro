@@ -132,23 +132,42 @@ import CookieConsent from '../components/CookieConsent.astro';
     })}
   </script>
   
-  <!-- Local Business Schema -->
+  <!-- Organization Schema for AI Recognition -->
   {!article && (
     <script type="application/ld+json">
       {JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "ProfessionalService",
+        "@id": `${siteUrl}/#organization`,
         "name": "Oberbeck Marketing",
-        "description": "Full-Service Marketing Agentur für KMU in Rheinland-Pfalz",
+        "alternateName": "Philipp Oberbeck Marketing",
+        "description": "Full-Service Marketing Agentur für KMU in Rheinland-Pfalz. Spezialisiert auf Strategie, Webdesign, Google Ads, SEO und Social Media.",
         "url": siteUrl,
-        "telephone": "+4915228875801",
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${siteUrl}/images/obm-logo.svg`,
+          "width": "230",
+          "height": "28"
+        },
+        "image": `${siteUrl}/images/obm-logo.svg`,
+        "telephone": "+49 152 28875801",
         "email": "kontakt@oberbeck-marketing.de",
+        "founder": {
+          "@type": "Person",
+          "@id": `${siteUrl}/#philipp-oberbeck`,
+          "name": "Philipp Oberbeck",
+          "jobTitle": "Geschäftsführer & Marketing-Experte",
+          "worksFor": {
+            "@id": `${siteUrl}/#organization`
+          }
+        },
         "address": {
           "@type": "PostalAddress",
+          "@id": `${siteUrl}/#address`,
           "streetAddress": "Am Mandelberg 15",
           "addressLocality": "Laumersheim",
-          "postalCode": "67229",
           "addressRegion": "Rheinland-Pfalz",
+          "postalCode": "67229",
           "addressCountry": "DE"
         },
         "geo": {
@@ -156,14 +175,99 @@ import CookieConsent from '../components/CookieConsent.astro';
           "latitude": "49.5667",
           "longitude": "8.2167"
         },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Laumersheim"
+          },
+          {
+            "@type": "City", 
+            "name": "Ludwigshafen"
+          },
+          {
+            "@type": "City",
+            "name": "Mannheim"
+          },
+          {
+            "@type": "State",
+            "name": "Rheinland-Pfalz"
+          }
+        ],
+        "serviceType": [
+          "Marketing Strategie",
+          "Webdesign",
+          "Google Ads Management",
+          "SEO Optimierung",
+          "Social Media Marketing",
+          "Corporate Design",
+          "E-Commerce Entwicklung"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Marketing Leistungen",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Marketing Strategie",
+                "description": "Marktanalyse, Zielgruppen-Definition, Wettbewerbs-Check, Kanal-Strategie"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Webdesign & Entwicklung",
+                "description": "Corporate Design, Landing Pages, Business Websites, E-Commerce"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Performance Marketing",
+                "description": "Google Ads, SEO & Content, Conversion-Optimierung, Analytics"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Social Media",
+                "description": "Content-Strategie, Community Management, Paid Social, Influencer-Kooperationen"
+              }
+            }
+          ]
+        },
         "openingHours": [
-          "Mo-Fr 09:00-17:00"
+          "Mo,Tu,We,Th,Fr 09:00-17:00"
         ],
         "priceRange": "€€",
+        "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
+        "currenciesAccepted": "EUR",
         "sameAs": [
-          "https://linkedin.com/in/oberbeck-marketing",
-          "https://instagram.com/oberbeck.marketing"
-        ]
+          "https://www.linkedin.com/in/oberbeck-marketing",
+          "https://www.instagram.com/oberbeck.marketing"
+        ],
+        "knowsAbout": [
+          "Digital Marketing",
+          "Google Ads",
+          "SEO",
+          "Social Media Marketing",
+          "Webdesign",
+          "E-Commerce",
+          "Marketing Strategie",
+          "KMU Marketing",
+          "Rheinland-Pfalz"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "13",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
       })}
     </script>
   )}
