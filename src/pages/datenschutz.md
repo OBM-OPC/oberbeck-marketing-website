@@ -10,13 +10,13 @@ pubDate: 2026-04-04
 
 **Oberbeck Marketing**  
 Philipp Oberbeck  
-Hauptstraße 123  
-67149 Laumersheim  
+Am Mandelberg 15  
+67229 Laumersheim  
 Deutschland
 
 **Kontakt:**  
-E-Mail: kontakt@oberbeck-marketing.de  
-Telefon: 06238 1234567
+Telefon: +49 171 2020885  
+E-Mail: kontakt@oberbeck-marketing.de
 
 ## 2. Allgemeine Hinweise
 
