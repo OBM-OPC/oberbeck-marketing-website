@@ -2,8 +2,9 @@
 
 :root {
   --color-primary: #1e3a5f;
-  --color-accent: #f59e0b;
-  --color-accent-hover: #d97706;
+  --color-accent: #52baeb;
+  --color-accent-light: #7acdf0;
+  --color-accent-dark: #3a9bd1;
   --color-warm-white: #faf8f5;
   --color-charcoal: #1a1a1a;
   --color-slate: #64748b;
@@ -65,7 +66,7 @@ body {
   right: -50%;
   width: 100%;
   height: 600px;
-  background: linear-gradient(135deg, rgba(30, 58, 95, 0.03) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(82, 186, 235, 0.08) 0%, transparent 50%);
   transform: rotate(-5deg);
   z-index: -1;
   pointer-events: none;
@@ -73,7 +74,7 @@ body {
 
 /* Trust badge glow */
 .trust-badge {
-  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 20px rgba(82, 186, 235, 0.4);
 }
 
 /* Card hover effect */
@@ -83,12 +84,12 @@ body {
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(30, 58, 95, 0.15);
+  box-shadow: 0 20px 40px rgba(82, 186, 235, 0.15);
 }
 
 /* Star rating */
 .star-filled {
-  color: #f59e0b;
+  color: #52baeb;
 }
 
 /* Focus styles */
