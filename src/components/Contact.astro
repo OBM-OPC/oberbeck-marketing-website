@@ -81,7 +81,7 @@ const contactMethods = [
         <p class="text-[#64748b] mb-6">Wir antworten innerhalb eines Werktages.</p>
 
         <form 
-          action="https://formspree.io/f/YOUR_FORM_ID" 
+          action="https://formspree.io/f/mqewayyw" 
           method="POST"
           class="space-y-5"
         >
@@ -149,6 +149,21 @@ const contactMethods = [
             ></textarea>
           </div>
 
+          <!-- Datenschutz Checkbox -->
+          <div class="flex items-start gap-3">
+            <input 
+              type="checkbox" 
+              id="datenschutz" 
+              name="datenschutz" 
+              required
+              class="mt-1 w-4 h-4 rounded border-slate-300 text-[#52baeb] focus:ring-[#52baeb]"
+            />
+            <label for="datenschutz" class="text-sm text-[#64748b]">
+              Ich habe die <a href="/datenschutz" class="text-[#1e3a5f] underline hover:text-[#52baeb]">Datenschutzerklärung</a> gelesen 
+              und stimme der Verarbeitung meiner Daten gemäß DSGVO zu. *
+            </label>
+          </div>
+
           <button 
             type="submit"
             class="w-full py-4 bg-[#52baeb] hover:bg-[#3a9bd1] text-white font-semibold rounded-xl transition-all transform hover:scale-[1.02] shadow-xl shadow-[#52baeb]/25"
@@ -157,7 +172,7 @@ const contactMethods = [
           </button>
 
           <p class="text-xs text-[#64748b] text-center">
-            Mit dem Absenden akzeptieren Sie die Datenschutzbestimmungen.
+            * Pflichtfelder
           </p>
         </form>
       </div>
