@@ -1,5 +1,5 @@
 ---
-const isBlogPage = Astro.url.pathname.startsWith('/blog') || Astro.url.pathname === '/datenschutz' || Astro.url.pathname === '/impressum';
+const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '/index.html';
 
 const navItems = [
   { label: "Leistungen", href: "/#leistungen", icon: "briefcase" },
@@ -20,7 +20,7 @@ const iconPaths: Record<string, string> = {
 
 <nav 
   id="main-nav"
-  class={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${isBlogPage ? 'bg-white/95 shadow-lg shadow-slate-900/5 backdrop-blur-sm' : ''}`}
+  class={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${!isHomePage ? 'bg-white/95 shadow-lg shadow-slate-900/5 backdrop-blur-sm' : ''}`}
   data-scrolled="false"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
