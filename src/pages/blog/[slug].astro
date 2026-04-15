@@ -37,32 +37,32 @@ const relatedPosts = allPosts
   <article class="min-h-screen">
     
     {/* Hero Section with Image */}
-    <header class="relative">
-      <!-- Background Image -->
-      <div class="absolute inset-0">
+    <header class="relative bg-[#1a1a1a]">
+      <!-- Featured Image -->
+      <div class="relative aspect-[21/9] overflow-hidden">
         <img 
           src={post.data.image || '/images/blog-placeholder.jpg'} 
-          alt=""
-          class="w-full h-full object-cover"
+          alt={post.data.title}
+          class="w-full h-full object-cover opacity-40"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/80 to-[#1a1a1a]/40"></div>
-      </div>
-      
-      <div class="relative pt-32 pb-20 lg:pt-40 lg:pb-28">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Breadcrumb */}
-          <nav class="flex items-center gap-2 text-sm text-white/70 mb-8">
-            <a href="/" class="hover:text-white transition-colors">Startseite</a>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-            <a href="/blog" class="hover:text-white transition-colors">Blog</a>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-            <span class="text-white">Artikel</span>
-          </nav>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/60 to-transparent"></div>
+        
+        <!-- Content overlay -->
+        <div class="absolute bottom-0 left-0 right-0 pt-32 pb-10 lg:pt-40 lg:pb-14">
+          <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            {/* Breadcrumb */}
+            <nav class="flex items-center gap-2 text-sm text-white/70 mb-6">
+              <a href="/" class="hover:text-white transition-colors">Startseite</a>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+              <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+              <span class="text-white">Artikel</span>
+            </nav>
           
           {/* Tags */}
           <div class="flex flex-wrap gap-2 mb-6">
@@ -115,6 +115,7 @@ const relatedPosts = allPosts
               </svg>
               {post.data.readingTime || '5'} Min. Lesezeit
             </span>
+          </div>
           </div>
         </div>
       </div>
