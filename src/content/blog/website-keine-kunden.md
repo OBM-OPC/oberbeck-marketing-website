@@ -5,6 +5,7 @@ pubDate: 2025-03-15
 author: "Philipp Oberbeck"
 tags: ["Webdesign", "Conversion", "KMU"]
 featured: true
+image: "/images/blog/website-keine-kunden.jpg"
 ---
 
 ## Das Problem: Eine Website, die niemanden überzeugt

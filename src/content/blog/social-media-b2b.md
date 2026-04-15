@@ -4,6 +4,7 @@ description: "Warum auch B2B-Unternehmen auf Social Media nicht verzichten sollt
 pubDate: 2025-02-28
 author: "Philipp Oberbeck"
 tags: ["Social Media", "B2B", "Content Strategy"]
+image: "/images/blog/social-media-b2b.jpg"
 ---
 
 ## Die Skepsis ist verständlich

@@ -4,6 +4,7 @@ description: "Praktische Tipps für effektive Google Ads Kampagnen — auch wenn
 pubDate: 2025-03-08
 author: "Philipp Oberbeck"
 tags: ["Google Ads", "Performance", "KMU"]
+image: "/images/blog/google-ads-kmu.jpg"
 ---
 
 ## Das Dilemma vieler KMU
