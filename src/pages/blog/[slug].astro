@@ -172,12 +172,11 @@ const relatedPosts = allPosts
             {relatedPosts.map((relatedPost: any) => (
               <a href={`/blog/${relatedPost.slug}`} class="group">
                 <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-                  <div class="aspect-video overflow-hidden">
+                  <div class="aspect-video overflow-hidden bg-slate-100">
                     <img 
                       src={relatedPost.data.image || '/images/blog-placeholder.jpg'} 
                       alt={relatedPost.data.title}
                       class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
                     />
                   </div>
                   
