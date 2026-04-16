@@ -1,0 +1,5 @@
+# Netlify redirects file
+# Redirect rules for SPAs and API routes
+
+# Redirect /admin/* to handle Decap CMS routing
+/admin/*    /admin/index.html   200

@@ -2,7 +2,7 @@
 node_modules/
 
 # Build output
-dist/
+# dist/  # Uncommented to track dist for deployment
 
 # Environment files
 .env
