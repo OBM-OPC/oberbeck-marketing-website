@@ -100,15 +100,10 @@ const iconPaths: Record<string, string> = {
           {navItems.map((item, index) => (
             <a 
               href={item.href} 
-              class="mobile-nav-link group flex items-center gap-4 p-4 rounded-2xl text-slate-700 hover:text-[#1e3a5f] hover:bg-slate-50 transition-all duration-300"
+              class="mobile-nav-link group flex items-center p-4 rounded-2xl text-slate-700 hover:text-[#1e3a5f] hover:bg-slate-50 transition-all duration-300"
               data-section={item.href.replace('/#', '').replace('#', '')}
               style={`animation-delay: ${index * 50}ms`}
             >
-              <div class="w-12 h-12 rounded-xl bg-slate-100 group-hover:bg-[#52baeb]/10 flex items-center justify-center transition-colors">
-                <svg class="w-6 h-6 text-slate-500 group-hover:text-[#52baeb] transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                  <path d={iconPaths[item.icon]} />
-                </svg>
-              </div>
               <span class="text-xl font-semibold">{item.label}</span>
             </a>
           ))}
