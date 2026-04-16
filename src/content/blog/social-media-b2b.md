@@ -5,6 +5,7 @@ pubDate: 2025-02-28
 author: "Philipp Oberbeck"
 tags: ["Social Media", "B2B", "Content Strategy"]
 image: "/images/blog/social-media-b2b.jpg"
+readingTime: 7
 ---
 
 ## Die Skepsis ist verständlich

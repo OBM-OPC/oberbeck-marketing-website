@@ -6,6 +6,7 @@ author: "Philipp Oberbeck"
 tags: ["Webdesign", "Conversion", "KMU"]
 featured: true
 image: "/images/blog/website-keine-kunden.jpg"
+readingTime: 5
 ---
 
 ## Das Problem: Eine Website, die niemanden überzeugt

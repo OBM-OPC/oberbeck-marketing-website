@@ -5,6 +5,7 @@ pubDate: 2025-03-08
 author: "Philipp Oberbeck"
 tags: ["Google Ads", "Performance", "KMU"]
 image: "/images/blog/google-ads-kmu.jpg"
+readingTime: 6
 ---
 
 ## Das Dilemma vieler KMU

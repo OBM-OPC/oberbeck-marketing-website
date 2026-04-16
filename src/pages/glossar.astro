@@ -141,21 +141,17 @@ const glossarEntries = [
         </div>
 
         {/* Schema Markup */}
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "DefinedTermSet",
-            "name": "Marketing Glossar - Oberbeck Marketing",
-            "description": "Verständliche Erklärungen wichtiger Marketing-Begriffe für Unternehmer",
-            "hasDefinedTerm": [
-              {glossarEntries.map(entry => ({
-                "@type": "DefinedTerm",
-                "name": entry.term,
-                "description": entry.explanation
-              }))}
-            ]
-          }
-        </script>
+        <script type="application/ld+json" set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "DefinedTermSet",
+          "name": "Marketing Glossar - Oberbeck Marketing",
+          "description": "Verständliche Erklärungen wichtiger Marketing-Begriffe für Unternehmer",
+          "hasDefinedTerm": glossarEntries.map(entry => ({
+            "@type": "DefinedTerm",
+            "name": entry.term,
+            "description": entry.explanation
+          }))
+        })} />
 
         {/* CTA */}
         <div class="mt-16 text-center">
