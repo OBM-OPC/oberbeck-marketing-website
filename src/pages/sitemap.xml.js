@@ -39,7 +39,7 @@ export async function GET() {
     <priority>0.8</priority>
     <lastmod>${post.data.pubDate.toISOString().split('T')[0]}</lastmod>
     <image:image>
-      <image:loc>${post.data.image}</image:loc>
+      <image:loc>${siteUrl}${post.data.image}</image:loc>
       <image:title>${post.data.title}</image:title>
       <image:caption>${post.data.description}</image:caption>
     </image:image>
