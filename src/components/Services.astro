@@ -111,20 +111,32 @@ const iconPaths: Record<string, string> = {
       ))}
     </div>
 
-    <!-- CTA -->
-    <div class="mt-16 text-center relative">
+    <!-- Links -->
+    <div class="mt-16 text-center relative space-y-6">
       <!-- Decorative Line -->
       <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-px h-16 bg-gradient-to-b from-transparent via-[#52baeb]/30 to-transparent"></div>
       
       <a 
-        href="#kontakt"
-        class="inline-flex items-center justify-center px-8 py-4 bg-[#1e3a5f] hover:bg-[#152d4a] text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl shadow-slate-900/20"
+        href="/leistungen"
+        class="inline-flex items-center justify-center px-6 py-3 text-[#1e3a5f] hover:bg-[#1e3a5f]/5 font-semibold rounded-xl transition-all border-2 border-[#1e3a5f]/20 hover:border-[#1e3a5f]/40"
       >
-        Unverbindliches Erstgespräch vereinbaren
-        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        Alle Leistungen im Detail
+        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
         </svg>
       </a>
+
+      <div>
+        <a 
+          href="#kontakt"
+          class="inline-flex items-center justify-center px-8 py-4 bg-[#1e3a5f] hover:bg-[#152d4a] text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl shadow-slate-900/20"
+        >
+          Unverbindliches Erstgespräch vereinbaren
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
