@@ -1,0 +1,214 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Marketing Agentur Laumersheim | Oberbeck Marketing";
+const description = "Marketing-Agentur in Laumersheim: Webdesign, SEO, Google Ads, Social Media und Markenaufbau für Unternehmen in Laumersheim und der Pfalz.";
+
+const highlights = [
+  {
+    title: 'Lokal präsent',
+    text: 'Direkt in Laumersheim verankert und mit kurzen Wegen für persönliche Abstimmungen.',
+    icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'
+  },
+  {
+    title: 'Regional relevant',
+    text: 'Marketing mit Verständnis für die Pfalz, ihre Unternehmen, Zielgruppen und Besonderheiten.',
+    icon: 'M3 7h18M3 12h18M3 17h18'
+  },
+  {
+    title: 'Messbare Ergebnisse',
+    text: 'Von Sichtbarkeit bis Leadgenerierung: Maßnahmen mit klarer Richtung und nachvollziehbaren KPIs.',
+    icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6'
+  }
+];
+
+const services = [
+  {
+    title: 'Webdesign für Unternehmen in Laumersheim',
+    text: 'Moderne Websites, Landingpages und Relaunches für Unternehmen, die in Laumersheim und Umgebung professionell auftreten wollen.',
+    points: ['Responsive Websites', 'Conversion-starke Landingpages', 'Texte & Struktur', 'Performance-Optimierung']
+  },
+  {
+    title: 'Lokales SEO',
+    text: 'Bessere Auffindbarkeit bei Suchanfragen rund um Laumersheim, die Pfalz und relevante Leistungen in Ihrer Region.',
+    points: ['Local SEO', 'Standortseiten', 'Google Unternehmensprofil', 'OnPage-Optimierung']
+  },
+  {
+    title: 'Google Ads',
+    text: 'Gezielte Kampagnen für regionale Reichweite, Anfragen und Sichtbarkeit bei relevanten Suchbegriffen.',
+    points: ['Suchkampagnen', 'Remarketing', 'Landingpage-Abstimmung', 'Tracking & Reporting']
+  },
+  {
+    title: 'Grafikdesign & Markenauftritt',
+    text: 'Damit Kunden sofort verstehen, was Sie anbieten: klarer Markenauftritt, Werbemittel und visuelle Kommunikation.',
+    points: ['Logo & Corporate Design', 'Flyer & Broschüren', 'Social Media Assets', 'Anzeigenmotive']
+  }
+];
+
+const localContext = [
+  'Laumersheim ist vielen Menschen vor allem über Wein, Gastronomie und regionale Betriebe ein Begriff.',
+  'Bekannte Suchanfragen drehen sich häufig um Orte und Namen wie Knipser, Weißes Lamm, Martinshof oder Weingüter aus der Region.',
+  'Genau deshalb ist eine starke lokale Online-Präsenz wichtig: Wer in Laumersheim sucht, soll Ihr Unternehmen schnell verstehen und direkt finden können.',
+  'Wir nutzen diesen lokalen Kontext sinnvoll — nicht als Keyword-Stuffing, sondern als saubere Grundlage für regionale Sichtbarkeit.'
+];
+---
+
+<Layout title={title} description={description}>
+  <Navigation />
+
+  <div class="min-h-screen bg-gradient-to-b from-[#faf8f5] to-white">
+    <section class="pt-32 pb-18 lg:pt-40 lg:pb-24 relative overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#52baeb]/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <nav class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+          <a href="/" class="hover:text-[#1e3a5f] transition-colors">Startseite</a>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-[#1e3a5f] font-medium">Marketing Agentur Laumersheim</span>
+        </nav>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Lokale Sichtbarkeit in der Pfalz</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-6 leading-tight">
+              Marketing Agentur in <span class="text-[#1e3a5f]">Laumersheim</span>
+            </h1>
+            <p class="text-xl text-[#64748b] mb-8">
+              Wir unterstützen Unternehmen in <strong>Laumersheim</strong> und der umliegenden Pfalz mit <strong>Webdesign, SEO, Google Ads, Social Media und Markenaufbau</strong> — klar, professionell und messbar.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/#kontakt" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#52baeb] to-[#3a9bd1] text-white font-semibold rounded-xl transition-all hover:scale-105 shadow-xl shadow-[#52baeb]/20">
+                Unverbindlich anfragen
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+              <a href="tel:+4915228875801" class="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1e3a5f] font-semibold rounded-xl border-2 border-[#1e3a5f]/10 hover:border-[#1e3a5f]/30 transition-all">
+                +49 152 28875801
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
+            <h2 class="text-xl font-bold text-[#1a1a1a] mb-6">Warum lokal so wichtig ist</h2>
+            <div class="space-y-4">
+              {highlights.map((item) => (
+                <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 hover:bg-[#52baeb]/5 transition-colors">
+                  <div class="w-12 h-12 bg-gradient-to-br from-[#1e3a5f] to-[#52baeb] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-[#1a1a1a] mb-1">{item.title}</h3>
+                    <p class="text-sm text-[#64748b]">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-18 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Leistungen in Laumersheim</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-6">Was wir für Unternehmen vor Ort umsetzen</h2>
+          <p class="text-lg text-[#64748b]">
+            Viele Unternehmen werden online nicht klar genug verstanden. Genau da setzen wir an: mit einer Positionierung, die Leistungen verständlich macht und Kunden direkt abholt.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {services.map((service) => (
+            <div class="bg-[#faf8f5] rounded-2xl p-8 border border-slate-100 hover:shadow-lg hover:shadow-slate-900/5 transition-all">
+              <h3 class="text-xl font-bold text-[#1a1a1a] mb-3">{service.title}</h3>
+              <p class="text-[#64748b] mb-5 leading-relaxed">{service.text}</p>
+              <ul class="space-y-2">
+                {service.points.map((point) => (
+                  <li class="flex items-start gap-2 text-sm text-[#64748b]">
+                    <svg class="w-4 h-4 text-[#52baeb] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-18 lg:py-24 bg-[#faf8f5]">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-slate-100">
+          <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Lokaler Kontext</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-6">Warum Laumersheim ein spezieller Standort ist</h2>
+          <div class="space-y-4 text-[#64748b] text-lg leading-relaxed">
+            {localContext.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-18 lg:py-24 bg-gradient-to-br from-[#1e3a5f] to-[#152d4a]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-5">Sie möchten in Laumersheim besser gefunden werden?</h2>
+        <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+          Dann entwickeln wir gemeinsam einen Auftritt, der Ihre Leistungen verständlich macht und Ihre Sichtbarkeit in Laumersheim und der Pfalz gezielt verbessert.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#kontakt" class="inline-flex items-center justify-center px-8 py-4 bg-[#52baeb] hover:bg-[#3a9bd1] text-white font-semibold rounded-xl transition-all hover:scale-105 shadow-xl shadow-[#52baeb]/25">
+            Kostenloses Erstgespräch
+          </a>
+          <a href="/leistungen" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all border border-white/20">
+            Alle Leistungen ansehen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json">
+      {JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ProfessionalService',
+        '@id': 'https://oberbeck-marketing.de/marketing-agentur-laumersheim#business',
+        name: 'Oberbeck Marketing',
+        description: 'Marketing Agentur in Laumersheim für Webdesign, SEO, Google Ads, Social Media und Markenaufbau.',
+        url: 'https://oberbeck-marketing.de/marketing-agentur-laumersheim',
+        telephone: '+49 152 28875801',
+        areaServed: [
+          { '@type': 'Place', name: 'Laumersheim' },
+          { '@type': 'Place', name: 'Pfalz' }
+        ],
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Laumersheim',
+          addressRegion: 'Rheinland-Pfalz',
+          addressCountry: 'DE'
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Marketing Leistungen in Laumersheim',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Webdesign Laumersheim' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO Laumersheim' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Ads Laumersheim' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Grafikdesign Laumersheim' } }
+          ]
+        }
+      })}
+    </script>
+  </div>
+
+  <Footer />
+</Layout>
