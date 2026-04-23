@@ -15,6 +15,20 @@
   </url>
   
   <url>
+    <loc>https://oberbeck-marketing.de/leistungen</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oberbeck-marketing.de/marketing-agentur-laumersheim</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  
+  <url>
     <loc>https://oberbeck-marketing.de/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -41,7 +55,7 @@
     <loc>https://oberbeck-marketing.de/blog/google-ads-kmu</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-03-08</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <image:image>
       <image:loc>https://oberbeck-marketing.de/images/blog/google-ads-kmu.jpg</image:loc>
       <image:title>Google Ads für KMU: Wie Sie mit kleinem Budget große Ergebnisse erzielen</image:title>
@@ -89,7 +103,7 @@
     <loc>https://oberbeck-marketing.de/blog/social-media-b2b</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <image:image>
       <image:loc>https://oberbeck-marketing.de/images/blog/social-media-b2b.jpg</image:loc>
       <image:title>Social Media für B2B: Funktioniert das überhaupt?</image:title>
@@ -113,7 +127,7 @@
     <loc>https://oberbeck-marketing.de/blog/website-checkliste-kmu</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <image:image>
       <image:loc>https://oberbeck-marketing.de/images/blog/website-checkliste-kmu.jpg</image:loc>
       <image:title>Die 5-Minuten-Website-Checkliste für KMU: Ist Ihre Website bereit für 2026?</image:title>
@@ -125,7 +139,7 @@
     <loc>https://oberbeck-marketing.de/blog/website-keine-kunden</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-03-15</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <image:image>
       <image:loc>https://oberbeck-marketing.de/images/blog/website-keine-kunden.jpg</image:loc>
       <image:title>Warum Ihre Website keine Kunden bringt — und was Sie dagegen tun können</image:title>

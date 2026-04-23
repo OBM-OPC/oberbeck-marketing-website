@@ -9,6 +9,8 @@ export async function GET() {
   // Static pages
   const staticPages = [
     { url: '', changefreq: 'weekly', priority: 1.0 },
+    { url: '/leistungen', changefreq: 'weekly', priority: 0.9 },
+    { url: '/marketing-agentur-laumersheim', changefreq: 'monthly', priority: 0.8 },
     { url: '/blog', changefreq: 'weekly', priority: 0.9 },
     { url: '/impressum', changefreq: 'yearly', priority: 0.3 },
     { url: '/datenschutz', changefreq: 'yearly', priority: 0.3 },

@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
 const title = "Marketing Agentur Laumersheim | Oberbeck Marketing";
-const description = "Marketing-Agentur in Laumersheim: Webdesign, SEO, Google Ads, Social Media und Markenaufbau für Unternehmen in Laumersheim und der Pfalz.";
+const description = "Marketing-Agentur in Laumersheim: Webdesign, SEO, Google Ads, Social Media und Markenaufbau für Unternehmen in Laumersheim und der Pfalz. Persönliche Beratung, messbare Ergebnisse.";
 
 const highlights = [
   {
@@ -180,22 +180,43 @@ const localContext = [
     <script type="application/ld+json">
       {JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'ProfessionalService',
-        '@id': 'https://oberbeck-marketing.de/marketing-agentur-laumersheim#business',
+        '@type': 'LocalBusiness',
+        '@id': 'https://oberbeck-marketing.de/#localbusiness',
         name: 'Oberbeck Marketing',
         description: 'Marketing Agentur in Laumersheim für Webdesign, SEO, Google Ads, Social Media und Markenaufbau.',
-        url: 'https://oberbeck-marketing.de/marketing-agentur-laumersheim',
+        url: 'https://oberbeck-marketing.de',
         telephone: '+49 152 28875801',
+        email: 'kontakt@oberbeck-marketing.de',
+        priceRange: '$$',
         areaServed: [
-          { '@type': 'Place', name: 'Laumersheim' },
-          { '@type': 'Place', name: 'Pfalz' }
+          { '@type': 'City', name: 'Laumersheim' },
+          { '@type': 'State', name: 'Rheinland-Pfalz' }
         ],
         address: {
           '@type': 'PostalAddress',
+          streetAddress: 'Am Mandelberg 15',
           addressLocality: 'Laumersheim',
+          postalCode: '67229',
           addressRegion: 'Rheinland-Pfalz',
           addressCountry: 'DE'
         },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: '49.5167',
+          longitude: '8.2167'
+        },
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '09:00',
+            closes: '17:00'
+          }
+        ],
+        sameAs: [
+          'https://www.google.com/maps?cid=...',
+          'https://www.instagram.com/oberbeckmarketing'
+        ],
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: 'Marketing Leistungen in Laumersheim',
@@ -206,7 +227,7 @@ const localContext = [
             { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Grafikdesign Laumersheim' } }
           ]
         }
-      })}
+      })}}
     </script>
   </div>
 

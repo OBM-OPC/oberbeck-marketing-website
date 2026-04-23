@@ -1,7 +1,7 @@
 ---
 title: "Google Ads für KMU: Wie Sie mit kleinem Budget große Ergebnisse erzielen"
 description: "Praktische Tipps für effektive Google Ads Kampagnen — auch wenn Ihr Marketing-Budget begrenzt ist."
-pubDate: 2025-03-08
+pubDate: 2026-04-23
 author: "Philipp Oberbeck"
 tags: ["Google Ads", "Performance", "KMU"]
 image: "/images/blog/google-ads-kmu.jpg"

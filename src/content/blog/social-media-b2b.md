@@ -1,7 +1,7 @@
 ---
 title: "Social Media für B2B: Funktioniert das überhaupt?"
 description: "Warum auch B2B-Unternehmen auf Social Media nicht verzichten sollten — und wie Sie es richtig machen."
-pubDate: 2025-02-28
+pubDate: 2026-04-23
 author: "Philipp Oberbeck"
 tags: ["Social Media", "B2B", "Content Strategy"]
 image: "/images/blog/social-media-b2b.jpg"

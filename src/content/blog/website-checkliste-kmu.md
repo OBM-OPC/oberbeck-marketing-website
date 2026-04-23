@@ -1,7 +1,7 @@
 ---
 title: "Die 5-Minuten-Website-Checkliste für KMU: Ist Ihre Website bereit für 2026?"
 description: "Entdecken Sie in 5 Minuten, was Ihre KMU-Website wirklich braucht. Praktische Checkliste mit 15 Punkten zum sofortigen Umsetzen. Kostenloser PDF-Download!"
-pubDate: 2025-04-04
+pubDate: 2026-04-23
 author: "Oberbeck Marketing"
 tags: ["Website", "Checkliste", "KMU", "Conversion", "SEO"]
 image: "/images/blog/website-checkliste-kmu.jpg"

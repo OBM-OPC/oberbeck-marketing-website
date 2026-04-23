@@ -1,7 +1,7 @@
 ---
 title: "Warum Ihre Website keine Kunden bringt — und was Sie dagegen tun können"
 description: "Die häufigsten Fehler, die KMU-Websites unwirksam machen, und konkrete Lösungen, die funktionieren."
-pubDate: 2025-03-15
+pubDate: 2026-04-23
 author: "Philipp Oberbeck"
 tags: ["Webdesign", "Conversion", "KMU"]
 featured: true
