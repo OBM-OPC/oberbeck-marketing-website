@@ -349,8 +349,6 @@ const totalItems = mainCategories.reduce((acc, cat) =>
   
   <!-- Hero -->
   <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-to-br from-[#1e3a5f] via-[#1e3a5f] to-[#2d5a8f] overflow-hidden">
-    <!-- White gradient overlay at top for nav readability -->
-    <div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white/95 via-white/60 to-transparent z-10"></div>
     <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 32px 32px;"></div>
     <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#52baeb]/10 rounded-full blur-[120px]"></div>
     
@@ -366,7 +364,7 @@ const totalItems = mainCategories.reduce((acc, cat) =>
   </section>
 
   <!-- Quick Nav -->
-  <section class="sticky top-0 z-40 bg-white shadow-md border-b-2 border-[#52baeb]/30">
+  <section class="sticky top-0 z-40 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex overflow-x-auto no-scrollbar py-4 gap-2">
         {mainCategories.map((cat) => (
