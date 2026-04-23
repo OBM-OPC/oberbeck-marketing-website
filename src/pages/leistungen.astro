@@ -1,0 +1,477 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const mainCategories = [
+  {
+    title: "Marketing-Strategie",
+    slug: "strategie",
+    intro: "Keine Aktion ohne Plan. Wir analysieren Ihren Markt, Ihre Zielgruppe und Ihre Ziele — und entwickeln eine Strategie, die funktioniert.",
+    icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+    color: "from-amber-500 to-orange-500",
+    bgColor: "bg-amber-50",
+    textColor: "text-amber-600",
+    subServices: [
+      {
+        title: "Marktanalyse & Wettbewerbsbeobachtung",
+        items: [
+          "Analyse Ihrer Wettbewerbslandschaft (SWOT, Positionierung)",
+          "Identifikation von Marktchancen und -lücken",
+          "Benchmarking gegen relevante Mitbewerber",
+          "Branchentrends und Entwicklungen im Blick behalten"
+        ]
+      },
+      {
+        title: "Zielgruppenanalyse & Persona-Entwicklung",
+        items: [
+          "Erstellung detaillierter Buyer Personas",
+          "Demografische, psychografische und verhaltensbasierte Segmentierung",
+          "Customer Journey Mapping für jede Persona",
+          "Schmerzpunkte und Bedürfnisse identifizieren"
+        ]
+      },
+      {
+        title: "Marketingplan & Kanalstrategie",
+        items: [
+          "Entwicklung eines ganzheitlichen Marketingplans",
+          "Kanalauswahl basierend auf Zielgruppe und Budget",
+          "Budgetplanung und Ressourcenverteilung",
+          "Meilensteine und KPI-Definition"
+        ]
+      },
+      {
+        title: "Positionierung & Markenstrategie",
+        items: [
+          "USP-Entwicklung und Wertversprechen definieren",
+          "Markenpositionierung im Wettbewerbsumfeld",
+          "Markenkern, Werte und Tonalität festlegen",
+          "Brand Story und Narrativ entwickeln"
+        ]
+      },
+      {
+        title: "Kampagnenplanung",
+        items: [
+          "Kampagnenkonzeption von der Idee bis zum Go-Live",
+          "Multi-Channel-Kampagnen orchestrieren",
+          "A/B-Test-Strategien für optimale Ergebnisse",
+          "Echtzeit-Monitoring und Kampagnen-Optimierung"
+        ]
+      }
+    ]
+  },
+  {
+    title: "Grafikdesign & Kreation",
+    slug: "design",
+    intro: "Visuelle Identität, die bleibt. Von Logo über Print bis Social Media — wir gestalten Ihre Marke so, dass sie professionell und einprägsam wirkt.",
+    icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01",
+    color: "from-violet-500 to-purple-500",
+    bgColor: "bg-violet-50",
+    textColor: "text-violet-600",
+    subServices: [
+      {
+        title: "Corporate Design & Markenidentität",
+        items: [
+          "Logo-Design und Logo-Weiterentwicklung",
+          "Corporate Identity Manual / Brand Guidelines",
+          "Farbpalette, Typografie und Bildsprache definieren",
+          "Visuelles System für konsistenten Markenauftritt"
+        ]
+      },
+      {
+        title: "Printdesign",
+        items: [
+          "Visitenkarten, Briefbögen, Komplementärkarten",
+          "Flyer, Broschüren und Kataloge",
+          "Plakate und Banner für Events",
+          "Verpackungsdesign und Etiketten"
+        ]
+      },
+      {
+        title: "Werbe- & Kampagnenmaterialien",
+        items: [
+          "Anzeigenmotive für Print und Digital",
+          "Plakat- und Außenwerbung",
+          "POS-Materialien und Displays",
+          "Mailings und Direktwerbung"
+        ]
+      },
+      {
+        title: "Social Media Design",
+        items: [
+          "Social-Media-Templates (Posts, Stories, Reels)",
+          "Highlight-Covers und Profilgestaltung",
+          "Werbeanzeigen-Creatives für alle Plattformen",
+          "Infografiken undCarousel-Posts"
+        ]
+      },
+      {
+        title: "Präsentationsdesign",
+        items: [
+          "Pitch-Decks und Unternehmenspräsentationen",
+          "Folienvorlagen im Corporate Design",
+          "Interaktive Präsentationen für Messen",
+          "Investor-Deck und Jahresberichte"
+        ]
+      },
+      {
+        title: "Illustration & Bildbearbeitung",
+        items: [
+          "Illustrationen für Marketingmaterialien",
+          "Produktretusche und Composing",
+          "Bildbearbeitung und Optimierung",
+          "Icon-Sets und Pictogramme"
+        ]
+      }
+    ]
+  },
+  {
+    title: "Performance Marketing",
+    slug: "performance",
+    intro: "Datengetriebenes Marketing für echte Ergebnisse. Jeder Euro wird messbar eingesetzt — mit transparentem Reporting und klarem ROI.",
+    icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
+    color: "from-emerald-500 to-teal-500",
+    bgColor: "bg-emerald-50",
+    textColor: "text-emerald-600",
+    subServices: [
+      {
+        title: "Google Ads (SEA)",
+        items: [
+          "Search Ads: Keyword-Strategie und Anzeigentexte",
+          "Performance Max-Kampagnen für maximale Reichweite",
+          "Shopping-Kampagnen für E-Commerce",
+          "Remarketing und RLSA-Strategien",
+          "Kampagnen-Optimierung und Bid-Management"
+        ]
+      },
+      {
+        title: "Suchmaschinenoptimierung (SEO)",
+        items: [
+          "Technisches SEO (Crawlbarkeit, Geschwindigkeit, Struktur)",
+          "On-Page-Optimierung (Meta, Headings, interne Verlinkung)",
+          "Content-SEO und Keyword-Strategie",
+          "Local SEO und Google Unternehmensprofil",
+          "Linkbuilding und Off-Page-Strategien"
+        ]
+      },
+      {
+        title: "Conversion-Optimierung (CRO)",
+        items: [
+          "Landing-Page-Optimierung",
+          "A/B- und Multivariante-Testing",
+          "Usability-Analyse und User-Feedback",
+          "Conversion-Funnel-Analyse und -Optimierung"
+        ]
+      },
+      {
+        title: "Analytics & Tracking",
+        items: [
+          "Google Analytics 4 Setup und Konfiguration",
+          "Conversion-Tracking und Ziel-Definition",
+          "Tag Manager Implementation",
+          "Custom Dashboards und Reportings",
+          "Attribution-Modelle und Datenanalyse"
+        ]
+      }
+    ]
+  },
+  {
+    title: "Social Media Marketing",
+    slug: "social-media",
+    intro: "Da sein, wo Ihre Kunden sind. Wir bauen Ihre Social-Media-Präsenz auf — authentisch, konsistent und zielgruppenorientiert.",
+    icon: "M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z",
+    color: "from-pink-500 to-rose-500",
+    bgColor: "bg-pink-50",
+    textColor: "text-pink-600",
+    subServices: [
+      {
+        title: "Social-Media-Strategie",
+        items: [
+          "Plattform-Strategie (Instagram, LinkedIn, Facebook, TikTok)",
+          "Content-Pillar und Themen-Clusters definieren",
+          "Redaktionsplan und Content-Kalender",
+          "KPI-Definition und Erfolgsmessung"
+        ]
+      },
+      {
+        title: "Content-Produktion",
+        items: [
+          "Fotoproduktion und Bildkomposition",
+          "Videoproduktion (Reels, Shorts, TikToks)",
+          "Copywriting für alle Plattformen",
+          "User-Generated-Content-Strategien"
+        ]
+      },
+      {
+        title: "Community Management",
+        items: [
+          "Kommunikation und Dialogführung",
+          "Kommentar- und Nachrichten-Management",
+          "Krisenkommunikation und Reputationsmanagement",
+          "Community-Aufbau und -Pflege"
+        ]
+      },
+      {
+        title: "Paid Social Advertising",
+        items: [
+          "Meta Ads (Facebook & Instagram)",
+          "LinkedIn Ads für B2B-Targeting",
+          "TikTok Ads für jüngere Zielgruppen",
+          "Retargeting und Lookalike-Audiences"
+        ]
+      },
+      {
+        title: "Influencer-Kooperationen",
+        items: [
+          "Influencer-Identifikation und -Auswahl",
+          "Kampagnen-Konzeption mit Influencern",
+          "Vertragsabwicklung und Briefing",
+          "Erfolgsmessung und ROI-Tracking"
+        ]
+      }
+    ]
+  },
+  {
+    title: "Webdesign & Entwicklung",
+    slug: "web",
+    intro: "Websites, die verkaufen. Schnell, mobil-optimiert und auf Conversion ausgerichtet. Von der Landing Page bis zum kompletten Webauftritt.",
+    icon: "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9",
+    color: "from-sky-500 to-blue-500",
+    bgColor: "bg-sky-50",
+    textColor: "text-sky-600",
+    subServices: [
+      {
+        title: "Website-Design & -Relaunch",
+        items: [
+          "UI/UX-Design und Wireframing",
+          "Responsive Design für alle Geräte",
+          "Interaktive Prototypen und Click-Dummys",
+          "Barrierefreiheit (WCAG 2.1 AA)"
+        ]
+      },
+      {
+        title: "Landing Pages",
+        items: [
+          "Kampagnen-spezifische Landing Pages",
+          "Conversion-optimierte Seitenstrukturen",
+          "A/B-Test-Varianten",
+          "Lead-Magnets und Anmeldeformulare"
+        ]
+      },
+      {
+        title: "E-Commerce",
+        items: [
+          "Online-Shop Konzeption und Setup",
+          "Produktkatalog und Kategoriestruktur",
+          "Zahlungsintegration und Checkout-Optimierung",
+          "Shop-Management und Wartung"
+        ]
+      },
+      {
+        title: "Content-Management-Systeme",
+        items: [
+          "WordPress-Entwicklung und -Pflege",
+          "Headless-CMS-Lösungen",
+          "Individuelle Theme- und Plugin-Entwicklung",
+          "Schulung und Dokumentation"
+        ]
+      },
+      {
+        title: "Web-Performance & Technik",
+        items: [
+          "Ladezeit-Optimierung (Core Web Vitals)",
+          "Hosting-Beratung und -Einrichtung",
+          "SSL, Sicherheit und Wartung",
+          "API-Anbindungen und Integrationen"
+        ]
+      }
+    ]
+  },
+  {
+    title: "Technische Entwicklung",
+    slug: "entwicklung",
+    intro: "Technische Lösungen für komplexe Anforderungen. Custom Plugins, Automation, API-Integrationen — wir machen technisch möglich, was Ihr Marketing braucht.",
+    icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
+    color: "from-slate-600 to-slate-700",
+    bgColor: "bg-slate-50",
+    textColor: "text-slate-600",
+    subServices: [
+      {
+        title: "Custom Entwicklung",
+        items: [
+          "Individuelle WordPress-Plugins",
+          "Web-Applikationen und Tools",
+          "Formular- und Workflow-Lösungen",
+          "Datenbank-Anwendungen"
+        ]
+      },
+      {
+        title: "API-Integrationen",
+        items: [
+          "CRM-Anbindungen (HubSpot, Salesforce u.a.)",
+          "Newsletter-Systeme (Mailchimp, ConvertKit)",
+          "Buchungs- und Terminsysteme",
+          "Zahlungsschnittstellen (Stripe, PayPal)"
+        ]
+      },
+      {
+        title: "Marketing-Automation",
+        items: [
+          "E-Mail-Automatisierung und Drip-Kampagnen",
+          "Lead-Nurturing-Workflows",
+          "Trigger-basierte Kommunikation",
+          "Workflow-Optimierung und Prozess-Automation"
+        ]
+      },
+      {
+        title: "Analytics & Tracking Setup",
+        items: [
+          "Server-Side Tracking für Datenschutz-Konformität",
+          "Conversion-Tracking Implementierung",
+          "Event-Tracking und Custom Dimensions",
+          "Cross-Device und Cross-Domain Tracking"
+        ]
+      }
+    ]
+  }
+];
+
+const totalItems = mainCategories.reduce((acc, cat) => 
+  acc + cat.subServices.reduce((a, s) => a + s.items.length, 0), 0
+);
+---
+
+<Layout 
+  title="Unsere Leistungen im Detail — Oberbeck Marketing" 
+  description="Alle Leistungen von Oberbeck Marketing auf einen Blick: Marketing-Strategie, Grafikdesign, Performance Marketing, Social Media, Webdesign und technische Entwicklung."
+>
+  <Navigation />
+  
+  <!-- Hero -->
+  <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-to-br from-[#1e3a5f] via-[#1e3a5f] to-[#2d5a8f] overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#52baeb]/10 rounded-full blur-[120px]"></div>
+    
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Unsere Leistungen</span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+        Alles, was Ihr Marketing braucht — <span class="text-[#52baeb]">im Detail</span>
+      </h1>
+      <p class="text-lg lg:text-xl text-white/70 max-w-2xl mx-auto">
+        {mainCategories.length} Leistungsbereiche, {totalItems} Einzelleistungen — hier finden Sie genau das, was Ihr Unternehmen voranbringt.
+      </p>
+    </div>
+  </section>
+
+  <!-- Quick Nav -->
+  <section class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex overflow-x-auto no-scrollbar py-4 gap-2">
+        {mainCategories.map((cat) => (
+          <a 
+            href={`#${cat.slug}`}
+            class="flex-shrink-0 flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-[#1e3a5f] hover:bg-slate-50 transition-all border border-slate-200 hover:border-[#52baeb]"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={cat.icon} />
+            </svg>
+            {cat.title}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Categories -->
+  {mainCategories.map((cat, catIndex) => (
+    <section 
+      id={cat.slug} 
+      class={`py-16 lg:py-24 ${catIndex % 2 === 0 ? 'bg-white' : 'bg-[#faf8f5]'}`}
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Category Header -->
+        <div class="flex items-start gap-4 mb-12">
+          <div class={`w-14 h-14 bg-gradient-to-br ${cat.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={cat.icon} />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1a1a1a] mb-3">{cat.title}</h2>
+            <p class="text-lg text-[#64748b] max-w-3xl">{cat.intro}</p>
+          </div>
+        </div>
+
+        <!-- Sub-Services Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {cat.subServices.map((sub) => (
+            <div class={`${catIndex % 2 === 0 ? 'bg-[#faf8f5]' : 'bg-white'} rounded-2xl p-6 lg:p-8 border border-slate-100 group hover:shadow-lg hover:shadow-slate-900/5 transition-all duration-300`}>
+              <h3 class="text-lg font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
+                <span class={`w-2 h-2 rounded-full bg-gradient-to-r ${cat.color} flex-shrink-0`}></span>
+                {sub.title}
+              </h3>
+              <ul class="space-y-2.5">
+                {sub.items.map((item) => (
+                  <li class="flex items-start gap-2.5 text-sm text-[#64748b] leading-relaxed">
+                    <svg class={`w-4 h-4 ${cat.textColor} flex-shrink-0 mt-0.5`} fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Summary / CTA -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-[#1e3a5f] via-[#1e3a5f] to-[#2d5a8f] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#52baeb]/10 rounded-full blur-[120px]"></div>
+    
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
+        Das passende Paket für Ihr Unternehmen?
+      </h2>
+      <p class="text-lg text-white/70 mb-10 max-w-2xl mx-auto">
+        Sie müssen nicht alles alleine entscheiden. In einem kostenlosen Erstgespräch analysieren wir gemeinsam, welche Leistungen den größten Hebel für Ihr Unternehmen bieten.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="/#kontakt"
+          class="inline-flex items-center justify-center px-8 py-4 bg-[#52baeb] hover:bg-[#3a9bd1] text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl shadow-[#52baeb]/25"
+        >
+          Kostenlos beraten lassen
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        <a 
+          href="tel:+4915228875801"
+          class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all border border-white/20"
+        >
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          Anrufen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
