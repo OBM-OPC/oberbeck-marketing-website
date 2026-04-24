@@ -80,52 +80,54 @@ import CookieConsent from '../components/CookieConsent.astro';
   )}
   
   <!-- Structured Data -->
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": article ? "BlogPosting" : "WebSite",
-      ...(article && pubDate ? {
-        "headline": title,
-        "description": description,
-        "image": image,
-        "datePublished": pubDate.toISOString(),
-        "dateModified": pubDate.toISOString(),
-        "author": {
-          "@type": "Person",
-          "name": author
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Oberbeck Marketing",
-          "logo": {
-            "@type": "ImageObject",
-            "url": `${siteUrl}/images/obm-logo.svg`
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": canonicalUrl
-        }
-      } : {
-        "name": "Oberbeck Marketing",
-        "url": siteUrl,
-        "description": description,
-        "publisher": {
-          "@type": "Organization",
-          "name": "Oberbeck Marketing",
-          "logo": {
-            "@type": "ImageObject",
-            "url": `${siteUrl}/images/obm-logo.svg`
+  <script type="application/ld+json" set:html={JSON.stringify(
+    article && pubDate
+      ? {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": title,
+          "description": description,
+          "image": image,
+          "datePublished": pubDate.toISOString(),
+          "dateModified": pubDate.toISOString(),
+          "author": {
+            "@type": "Person",
+            "name": author
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Oberbeck Marketing",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${siteUrl}/images/obm-logo.svg`
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonicalUrl
           }
         }
-      })
-    })}
-  </script>
+      : {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Oberbeck Marketing",
+          "url": siteUrl,
+          "description": description,
+          "publisher": {
+            "@type": "Organization",
+            "name": "Oberbeck Marketing",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${siteUrl}/images/obm-logo.svg`
+            }
+          }
+        }
+  )} />
   
   <!-- Organization Schema for AI Recognition -->
   {!article && (
-    <script type="application/ld+json">
-      {JSON.stringify({
+    <script type="application/ld+json" set:html={JSON.stringify({
+      
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "@id": `${siteUrl}/#organization`,
@@ -249,10 +251,8 @@ import CookieConsent from '../components/CookieConsent.astro';
           "Marketing Strategie",
           "KMU Marketing",
           "Rheinland-Pfalz"
-        ],
-
-      })}
-    </script>
+        ]
+      })} />
   )}
   
   <meta name="generator" content={Astro.generator} />
