@@ -1,0 +1,457 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Marketing für Weingüter | Oberbeck Marketing";
+const description = "Marketing für Weingüter und Weinproduzenten: Webdesign, E-Commerce, Social Media und Event-Marketing. Steigern Sie Ihren Weinverkauf und Ihre Sichtbarkeit in der Pfalz.";
+
+const highlights = [
+  {
+    title: 'Weinverkauf online',
+    text: 'Erreichen Sie Weinliebhaber überregional und bieten Sie Ihre Weine direkt im Onlineshop an.',
+    icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'
+  },
+  {
+    title: 'Direktvermarktung',
+    text: 'Verkaufen Sie Ihre Weine direkt an Endkunden – ohne Zwischenhändler, mit höherer Marge.',
+    icon: 'M3 7h18M3 12h18M3 17h18'
+  },
+  {
+    title: 'Tourismus & Events',
+    text: 'Ziehen Sie Gäste an mit einer starken Online-Präsenz für Weinproben, Führungen und Veranstaltungen.',
+    icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6'
+  }
+];
+
+const services = [
+  {
+    title: 'Webdesign für Weingüter',
+    text: 'Eine ansprechende Website, die Ihre Weine, Ihre Geschichte und Ihr Weingut authentisch präsentiert.',
+    points: ['Responsive Website', 'Weinkeller & Sortenübersicht', 'Geschichten & Philosophie', 'Bildergalerie']
+  },
+  {
+    title: 'E-Commerce / Weinshop',
+    text: 'Verkaufen Sie Ihre Weine direkt online – mit einem benutzerfreundlichen Shop und sicherer Bezahlung.',
+    points: ['Online-Shop', 'Versandabwicklung', 'Produktpräsentation', 'Bestseller-Strategien']
+  },
+  {
+    title: 'Social Media für Weingüter',
+    text: 'Zeigen Sie die Schönheit Ihres Weinguts, Erntezeiten und Events auf Instagram und Facebook.',
+    points: ['Content-Strategie', 'Storytelling', 'Reels & Stories', 'Community-Management']
+  },
+  {
+    title: 'Event-Marketing',
+    text: 'Werbung für Weinproben, Hoffeste und Veranstaltungen – online und lokal zielgruppengerecht.',
+    points: ['Event-Seiten', 'Ticketverkauf', 'Social Ads', 'E-Mail-Marketing']
+  }
+];
+
+
+const faqs = [
+  {
+    question: "Warum braucht ein Weingut eine Website?",
+    answer: "Weil Ihre Kunden online nach Weingütern, Weinproben und Direktverkauf suchen. Eine professionelle Website zeigt Ihre Weine, Öffnungszeiten und Veranstaltungen – und generiert Besuche und Verkäufe rund um die Uhr."
+  },
+  {
+    question: "Was kostet Marketing für ein Weingut?",
+    answer: "Das hängt von Ihren Zielen ab. Eine Website mit Weinshop beginnt bei einem überschaubaren Budget. Wir finden gemeinsam die passende Lösung für Ihr Weingut."
+  },
+  {
+    question: "Kann ich Weine direkt über die Website verkaufen?",
+    answer: "Ja, absolut. Wir integrieren einen benutzerfreundlichen Onlineshop, über den Sie Ihre Weine direkt an Endkunden verkaufen können – inklusive sicherer Bezahlung und Versandabwicklung."
+  },
+  {
+    question: "Wie erreiche ich mehr Gäste für Weinproben?",
+    answer: "Mit gezieltem Social Media Marketing, Google Ads und Event-Marketing. Wir sorgen dafür, dass Ihre Veranstaltungen von der richtigen Zielgruppe gesehen werden."
+  },
+  {
+    question: "Wie unterscheidet sich Marketing für Weingüter von anderen Branchen?",
+    answer: "Weingüter verkaufen nicht nur Wein, sondern Erlebnisse, Tradition und Leidenschaft. Ihr Marketing muss daher emotional, authentisch und visuell stark sein – mit Fokus auf Storytelling und Genuss."
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <Navigation />
+
+  <div class="min-h-screen bg-gradient-to-b from-[#faf8f5] to-white">
+    <section class="pt-32 pb-18 lg:pt-40 lg:pb-24 relative overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#52baeb]/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <nav class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+          <a href="/" class="hover:text-[#1e3a5f] transition-colors">Startseite</a>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-[#1e3a5f] font-medium">Marketing für Weingüter</span>
+        </nav>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Sichtbarkeit für Weingüter</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-6 leading-tight">
+              Marketing für <span class="text-[#1e3a5f]">Weingüter</span> und Weinproduzenten
+            </h1>
+            <p class="text-xl text-[#64748b] mb-8">
+              Wir helfen Weingütern mit <strong>Webdesign, E-Commerce, Social Media und Event-Marketing</strong> dabei, ihre Weine online zu verkaufen, mehr Gäste anzuziehen und die Direktvermarktung zu stärken.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/#kontakt" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#52baeb] to-[#3a9bd1] text-white font-semibold rounded-xl transition-all hover:scale-105 shadow-xl shadow-[#52baeb]/20">
+                Unverbindlich anfragen
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+              <a href="tel:+4915228875801" class="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1e3a5f] font-semibold rounded-xl border-2 border-[#1e3a5f]/10 hover:border-[#1e3a5f]/30 transition-all">
+                +49 152 28875801
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
+            <h2 class="text-xl font-bold text-[#1a1a1a] mb-6">Warum Weingüter online präsent sein müssen</h2>
+            <div class="space-y-4">
+              {highlights.map((item) => (
+                <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 hover:bg-[#52baeb]/5 transition-colors">
+                  <div class="w-12 h-12 bg-gradient-to-br from-[#1e3a5f] to-[#52baeb] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-[#1a1a1a] mb-1">{item.title}</h3>
+                    <p class="text-sm text-[#64748b]">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-18 lg:py-24 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-[#faf8f5] rounded-3xl p-8 lg:p-12 shadow-xl border border-slate-100">
+          <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Ihre Geschichte</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-8">Vom Keller bis zum Kunden: Wein online erleben</h2>
+          <div class="space-y-5 text-[#64748b] text-lg leading-relaxed">
+            <p>
+              Ihr Wein ist ausgezeichnet. Ihre Reben gedeihen, Ihre Keller sind voll, und Ihre Weine sprechen für sich. Doch trotzdem haben Sie das Gefühl, dass viele potenzielle Kunden Ihr Weingut gar nicht kennen – einfach, weil Sie online nicht sichtbar genug sind.
+            </p>
+            <p>
+              Das ist keine Ausnahme. Viele Weingüter in der Pfalz verlassen sich noch auf Stammkunden, Direktverkauf vor Ort und regionale Händler. Das funktioniert oft gut, aber es hat Grenzen. Denn die Art, wie Menschen Weingüter entdecken, hat sich verändert.
+            </p>
+            <p>
+              Heute suchen Weinliebhaber online nach neuen Entdeckungen. Sie stöbern auf Instagram, googeln „Weingut Pfalz“ oder suchen nach Weinproben in der Nähe. Wer dort nicht auftaucht oder keine ansprechende Präsenz hat, verpasst wertvolle Chancen.
+            </p>
+            <p>
+              Das Gute: Das lässt sich ändern. Mit einer Website, die Ihre Weine, Ihre Geschichte und Ihr Weingut authentisch präsentiert. Mit einem Onlineshop, über den Kunden direkt bestellen können. Und mit Social Media, das die Schönheit Ihres Anwesens und Ihrer Weine zeigt.
+            </p>
+            <p class="text-[#1a1a1a] font-medium">
+              Genau dabei unterstützen wir Sie. Mit pragmatischen Lösungen, die zu Weingütern passen: emotional, visuell stark und zielgruppengerecht.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-18 lg:py-24 bg-[#faf8f5]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Leistungen für Weingüter</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-6">Was wir für Weingüter umsetzen</h2>
+          <p class="text-lg text-[#64748b]">
+            Viele Weingüter werden online nicht klar genug verstanden. Genau da setzen wir an: mit einer Positionierung, die Ihre Weine verständlich macht und Kunden direkt abholt.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {services.map((service) => (
+            <div class="bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-lg hover:shadow-slate-900/5 transition-all">
+              <h3 class="text-xl font-bold text-[#1a1a1a] mb-3">{service.title}</h3>
+              <p class="text-[#64748b] mb-5 leading-relaxed">{service.text}</p>
+              <ul class="space-y-2">
+                {service.points.map((point) => (
+                  <li class="flex items-start gap-2 text-sm text-[#64748b]">
+                    <svg class="w-4 h-4 text-[#52baeb] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section class="py-18 lg:py-24 bg-gradient-to-br from-[#1e3a5f] to-[#152d4a]">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Kostenlos & unverbindlich</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-5">Gratis Online-Präsenz-Check für Weingüter</h2>
+            <p class="text-lg text-slate-300 mb-6">
+              Finden Sie heraus, wie gut Ihr Weingut online gefunden wird. Wir prüfen Ihre Sichtbarkeit bei Google und Social Media und senden Ihnen eine kurze, verständliche Analyse per E-Mail.
+            </p>
+            <ul class="space-y-3 text-slate-300">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#52baeb] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Keine versteckten Kosten
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#52baeb] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Antwort innerhalb von 48 Stunden
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#52baeb] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Kein Verkaufsdruck im Anschluss
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-xl">
+            <h3 class="text-2xl font-bold text-[#1a1a1a] mb-2">Ihren Check anfordern</h3>
+            <p class="text-[#64748b] mb-6">Wir analysieren Ihre Online-Präsenz und melden uns bei Ihnen.</p>
+
+            <form
+              action="https://formspree.io/f/mqewayyw"
+              method="POST"
+              class="space-y-5"
+            >
+              <input type="hidden" name="_subject" value="Online-Präsenz-Check Anfrage - Weingut" />
+
+              <div>
+                <label for="lm-name" class="block text-sm font-medium text-[#1a1a1a] mb-2">Name *</label>
+                <input
+                  type="text"
+                  id="lm-name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#52baeb] focus:ring-2 focus:ring-[#52baeb]/20 outline-none transition-all"
+                  placeholder="Max Mustermann"
+                />
+              </div>
+
+              <div>
+                <label for="lm-email" class="block text-sm font-medium text-[#1a1a1a] mb-2">E-Mail *</label>
+                <input
+                  type="email"
+                  id="lm-email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#52baeb] focus:ring-2 focus:ring-[#52baeb]/20 outline-none transition-all"
+                  placeholder="max@firma.de"
+                />
+              </div>
+
+              <div>
+                <label for="lm-website" class="block text-sm font-medium text-[#1a1a1a] mb-2">Website-URL</label>
+                <input
+                  type="url"
+                  id="lm-website"
+                  name="website"
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#52baeb] focus:ring-2 focus:ring-[#52baeb]/20 outline-none transition-all"
+                  placeholder="https://www.ihre-website.de"
+                />
+              </div>
+
+              <div>
+                <label for="lm-problem" class="block text-sm font-medium text-[#1a1a1a] mb-2">Was ist Ihr größtes Problem?</label>
+                <select
+                  id="lm-problem"
+                  name="problem"
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#52baeb] focus:ring-2 focus:ring-[#52baeb]/20 outline-none transition-all bg-white"
+                >
+                  <option value="">Bitte wählen...</option>
+                  <option value="werde-nicht-gefunden">Werde nicht gefunden</option>
+                  <option value="website-veraltet">Website veraltet</option>
+                  <option value="keine-zeit">Keine Zeit für Marketing</option>
+                  <option value="unsicher">Unsicher wo anfangen</option>
+                </select>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="lm-datenschutz"
+                  name="datenschutz"
+                  required
+                  class="mt-1 w-4 h-4 rounded border-slate-300 text-[#52baeb] focus:ring-[#52baeb]"
+                />
+                <label for="lm-datenschutz" class="text-sm text-[#64748b]">
+                  Ich habe die <a href="/datenschutz" class="text-[#1e3a5f] underline hover:text-[#52baeb]">Datenschutzerklärung</a> gelesen
+                  und stimme der Verarbeitung meiner Daten gemäß DSGVO zu. *
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-4 bg-[#52baeb] hover:bg-[#3a9bd1] text-white font-semibold rounded-xl transition-all transform hover:scale-[1.02] shadow-xl shadow-[#52baeb]/25"
+              >
+                Gratis Online-Präsenz-Check anfordern
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-18 lg:py-24 bg-[#faf8f5]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Häufige Fragen</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-6">Was Weingüter uns oft fragen</h2>
+        </div>
+
+        <div class="space-y-4">
+          {faqs.map((faq, index) => (
+            <details class="bg-white rounded-2xl border border-slate-100 overflow-hidden group" name="faq">
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                <span class="font-semibold text-[#1a1a1a] text-lg pr-4">{faq.question}</span>
+                <span class="flex-shrink-0 w-8 h-8 bg-[#1e3a5f] rounded-full flex items-center justify-center transition-transform group-open:rotate-180">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </span>
+              </summary>
+              <div class="px-6 pb-6 text-[#64748b] leading-relaxed">
+                {faq.answer}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-18 lg:py-24 bg-gradient-to-br from-[#1e3a5f] to-[#152d4a]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-5">Sie möchten Ihr Weingut besser präsentieren?</h2>
+        <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+          Dann entwickeln wir gemeinsam einen Auftritt, der Ihre Weine verständlich macht und Ihre Sichtbarkeit online gezielt verbessert.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#kontakt" class="inline-flex items-center justify-center px-8 py-4 bg-[#52baeb] hover:bg-[#3a9bd1] text-white font-semibold rounded-xl transition-all hover:scale-105 shadow-xl shadow-[#52baeb]/25">
+            Kostenloses Erstgespräch
+          </a>
+          <a href="/leistungen" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all border border-white/20">
+            Alle Leistungen ansehen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'LocalBusiness',
+            '@id': 'https://oberbeck-marketing.de/#localbusiness',
+            name: 'Oberbeck Marketing',
+            description: 'Marketing für Weingüter und Weinproduzenten: Webdesign, E-Commerce, Social Media und Event-Marketing.',
+            url: 'https://oberbeck-marketing.de',
+            telephone: '+49 152 28875801',
+            email: 'kontakt@oberbeck-marketing.de',
+            priceRange: '$$',
+            areaServed: [
+              { '@type': 'State', name: 'Rheinland-Pfalz' }
+            ],
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Am Mandelberg 15',
+              addressLocality: 'Laumersheim',
+              postalCode: '67229',
+              addressRegion: 'Rheinland-Pfalz',
+              addressCountry: 'DE'
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: '49.5667',
+              longitude: '8.2167'
+            },
+            openingHoursSpecification: [
+              {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                opens: '09:00',
+                closes: '17:00'
+              }
+            ],
+            sameAs: [
+              'https://www.instagram.com/oberbeckmarketing'
+            ],
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Marketing Leistungen für Weingüter',
+              itemListElement: [
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Webdesign für Weingüter' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'E-Commerce für Weingüter' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media für Weingüter' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Event-Marketing für Weingüter' } }
+              ]
+            }
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Warum braucht ein Weingut eine Website?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Weil Ihre Kunden online nach Weingütern, Weinproben und Direktverkauf suchen. Eine professionelle Website zeigt Ihre Weine, Öffnungszeiten und Veranstaltungen – und generiert Besuche und Verkäufe rund um die Uhr.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Was kostet Marketing für ein Weingut?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Das hängt von Ihren Zielen ab. Eine Website mit Weinshop beginnt bei einem überschaubaren Budget. Wir finden gemeinsam die passende Lösung für Ihr Weingut.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Kann ich Weine direkt über die Website verkaufen?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Ja, absolut. Wir integrieren einen benutzerfreundlichen Onlineshop, über den Sie Ihre Weine direkt an Endkunden verkaufen können – inklusive sicherer Bezahlung und Versandabwicklung.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Wie erreiche ich mehr Gäste für Weinproben?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Mit gezieltem Social Media Marketing, Google Ads und Event-Marketing. Wir sorgen dafür, dass Ihre Veranstaltungen von der richtigen Zielgruppe gesehen werden.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Wie unterscheidet sich Marketing für Weingüter von anderen Branchen?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Weingüter verkaufen nicht nur Wein, sondern Erlebnisse, Tradition und Leidenschaft. Ihr Marketing muss daher emotional, authentisch und visuell stark sein – mit Fokus auf Storytelling und Genuss.'
+                }
+              }
+            ]
+          }
+        ]
+      })} />
+  </div>
+
+  <Footer />
+</Layout>
