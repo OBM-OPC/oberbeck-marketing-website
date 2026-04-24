@@ -1,0 +1,457 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Marketing für Ärzte & Praxen | Oberbeck Marketing";
+const description = "Marketing für Arztpraxen, Zahnärzte und medizinische Einrichtungen: Webdesign, Local SEO, Google Ads und Corporate Design. Gewinnen Sie Patienten und stärken Sie Ihre Online-Präsenz.";
+
+const highlights = [
+  {
+    title: 'Patientengewinnung',
+    text: 'Erreichen Sie neue Patienten online und machen Sie Ihre Praxis für potenzielle Patienten sichtbar.',
+    icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'
+  },
+  {
+    title: 'Terminbuchung online',
+    text: 'Ermöglichen Sie Patienten die einfache Online-Terminbuchung rund um die Uhr.',
+    icon: 'M3 7h18M3 12h18M3 17h18'
+  },
+  {
+    title: 'DSGVO-konform',
+    text: 'Sichere, datenschutzkonforme Websites, die den Anforderungen der DSGVO vollständig entsprechen.',
+    icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6'
+  }
+];
+
+const services = [
+  {
+    title: 'Webdesign für Praxen',
+    text: 'Eine professionelle, vertrauenswürdige Website, die Ihre Praxis und Ihr Team authentisch präsentiert.',
+    points: ['Responsive Website', 'Präsentation des Teams', 'Leistungsübersicht', 'Patienteninformationen']
+  },
+  {
+    title: 'Local SEO für Praxen',
+    text: 'Bessere Auffindbarkeit bei regionalen Suchanfragen wie "Zahnarzt in der Nähe" oder "Arzt Pfalz".',
+    points: ['Google Unternehmensprofil', 'Standortseiten', 'Brancheneinträge', 'OnPage-Optimierung']
+  },
+  {
+    title: 'Google Ads für Ärzte',
+    text: 'Gezielte Werbekampagnen für Ihre Praxis, die neue Patienten aus Ihrer Region gewinnen.',
+    points: ['Suchkampagnen', 'Remarketing', 'Landingpage-Abstimmung', 'Tracking & Reporting']
+  },
+  {
+    title: 'Corporate Design für Praxen',
+    text: 'Ein professioneller, einheitlicher Auftritt, der Vertrauen schafft und Sie von Mitbewerbern abhebt.',
+    points: ['Logo & Markenauftritt', 'Praxis-Ausstattung', 'Visitenkarten & Flyer', 'Social Media Templates']
+  }
+];
+
+
+const faqs = [
+  {
+    question: "Warum braucht eine Arztpraxis eine Website?",
+    answer: "Weil die meisten Patienten heute online nach Ärzten suchen, bevor sie einen Termin vereinbaren. Eine professionelle Website zeigt Ihre Leistungen, Öffnungszeiten und das Team – und generiert Patientenanfragen rund um die Uhr."
+  },
+  {
+    question: "Was kostet Marketing für eine Arztpraxis?",
+    answer: "Das hängt von Ihren Zielen ab. Eine Website mit Local SEO beginnt bei einem überschaubaren Budget. Wir finden gemeinsam die passende Lösung für Ihre Praxis."
+  },
+  {
+    question: "Können Patienten online Termine buchen?",
+    answer: "Ja, absolut. Wir integrieren ein benutzerfreundliches Online-Terminbuchungssystem, über das Patienten rund um die Uhr Termine vereinbaren können – inklusive automatischer Bestätigungen."
+  },
+  {
+    question: "Ist meine Website DSGVO-konform?",
+    answer: "Ja, wir achten bei jeder Website auf vollständige DSGVO-Konformität – inklusive Datenschutzerklärung, Cookie-Banner und sicherer Datenübertragung."
+  },
+  {
+    question: "Wie unterscheidet sich Marketing für Ärzte von anderen Branchen?",
+    answer: "Ärzte verkaufen nicht Produkte, sondern Vertrauen, Fachkenntnis und Sicherheit. Ihr Marketing muss daher besonders seriös, vertrauenswürdig und professionell sein – mit Fokus auf Patienteninformationen und Empathie."
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <Navigation />
+
+  <div class="min-h-screen bg-gradient-to-b from-[#faf8f5] to-white">
+    <section class="pt-32 pb-18 lg:pt-40 lg:pb-24 relative overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#52baeb]/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <nav class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+          <a href="/" class="hover:text-[#1e3a5f] transition-colors">Startseite</a>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-[#1e3a5f] font-medium">Marketing für Ärzte</span>
+        </nav>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Sichtbarkeit für Praxen</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-6 leading-tight">
+              Marketing für <span class="text-[#1e3a5f]">Arztpraxen</span>, Zahnärzte und medizinische Einrichtungen
+            </h1>
+            <p class="text-xl text-[#64748b] mb-8">
+              Wir helfen Ärzten und medizinischen Einrichtungen mit <strong>Webdesign, Local SEO, Google Ads und Corporate Design</strong> dabei, mehr Patienten zu gewinnen und online professionell aufzutreten.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/#kontakt" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#52baeb] to-[#3a9bd1] text-white font-semibold rounded-xl transition-all hover:scale-105 shadow-xl shadow-[#52baeb]/20">
+                Unverbindlich anfragen
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+              <a href="tel:+4915228875801" class="inline-flex items-center justify-center px-8 py-4 bg-white text-[#1e3a5f] font-semibold rounded-xl border-2 border-[#1e3a5f]/10 hover:border-[#1e3a5f]/30 transition-all">
+                +49 152 28875801
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
+            <h2 class="text-xl font-bold text-[#1a1a1a] mb-6">Warum Ärzte online präsent sein müssen</h2>
+            <div class="space-y-4">
+              {highlights.map((item) => (
+                <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 hover:bg-[#52baeb]/5 transition-colors">
+                  <div class="w-12 h-12 bg-gradient-to-br from-[#1e3a5f] to-[#52baeb] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-[#1a1a1a] mb-1">{item.title}</h3>
+                    <p class="text-sm text-[#64748b]">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-18 lg:py-24 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-[#faf8f5] rounded-3xl p-8 lg:p-12 shadow-xl border border-slate-100">
+          <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Ihre Geschichte</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-8">Wenn Patienten den falschen Arzt wählen, weil sie Sie nicht finden</h2>
+          <div class="space-y-5 text-[#64748b] text-lg leading-relaxed">
+            <p>
+              Sie sind ein kompetenter Arzt mit einem engagierten Team. Ihre Patienten schätzen Ihre Fürsorge, und Ihre Praxis ist modern ausgestattet. Doch trotzdem haben Sie das Gefühl, dass viele potenzielle Patienten die Praxis nebenan wählen – einfach, weil diese online besser sichtbar ist.
+            </p>
+            <p>
+              Das ist keine Ausnahme. Viele Arztpraxen verlassen sich noch auf Überweisungen und Mund-zu-Mund-Empfehlungen. Das funktioniert oft gut, aber es hat Grenzen. Denn die Art, wie Patienten Ärzte finden, hat sich grundlegend verändert.
+            </p>
+            <p>
+              Heute googeln Patienten „Zahnarzt in der Nähe“ oder „Orthopäde Pfalz“, bevor sie einen Termin vereinbaren. Wer dort nicht auftaucht oder keine überzeugende Präsenz hat, verliert oft still und leise an Patienten.
+            </p>
+            <p>
+              Das Gute: Das lässt sich ändern. Mit einer Website, die Ihre Praxis, Ihr Team und Ihre Leistungen professionell präsentiert. Mit einem Google-Eintrag, der gefunden wird. Und mit einer Online-Terminbuchung, die Patienten den ersten Schritt erleichtert.
+            </p>
+            <p class="text-[#1a1a1a] font-medium">
+              Genau dabei unterstützen wir Sie. Mit pragmatischen Lösungen, die zu Arztpraxen passen: seriös, DSGVO-konform und vertrauenswürdig.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-18 lg:py-24 bg-[#faf8f5]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Leistungen für Praxen</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-6">Was wir für Arztpraxen umsetzen</h2>
+          <p class="text-lg text-[#64748b]">
+            Viele Arztpraxen werden online nicht klar genug verstanden. Genau da setzen wir an: mit einer Positionierung, die Ihre Leistungen verständlich macht und Patienten direkt abholt.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {services.map((service) => (
+            <div class="bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-lg hover:shadow-slate-900/5 transition-all">
+              <h3 class="text-xl font-bold text-[#1a1a1a] mb-3">{service.title}</h3>
+              <p class="text-[#64748b] mb-5 leading-relaxed">{service.text}</p>
+              <ul class="space-y-2">
+                {service.points.map((point) => (
+                  <li class="flex items-start gap-2 text-sm text-[#64748b]">
+                    <svg class="w-4 h-4 text-[#52baeb] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section class="py-18 lg:py-24 bg-gradient-to-br from-[#1e3a5f] to-[#152d4a]">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Kostenlos & unverbindlich</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-5">Gratis Praxis-Sichtbarkeits-Check</h2>
+            <p class="text-lg text-slate-300 mb-6">
+              Finden Sie heraus, wie gut Ihre Praxis online gefunden wird. Wir prüfen Ihre Sichtbarkeit bei Google und senden Ihnen eine kurze, verständliche Analyse per E-Mail.
+            </p>
+            <ul class="space-y-3 text-slate-300">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#52baeb] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Keine versteckten Kosten
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#52baeb] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Antwort innerhalb von 48 Stunden
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#52baeb] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Kein Verkaufsdruck im Anschluss
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-xl">
+            <h3 class="text-2xl font-bold text-[#1a1a1a] mb-2">Ihren Check anfordern</h3>
+            <p class="text-[#64748b] mb-6">Wir analysieren Ihre Praxis-Sichtbarkeit und melden uns bei Ihnen.</p>
+
+            <form
+              action="https://formspree.io/f/mqewayyw"
+              method="POST"
+              class="space-y-5"
+            >
+              <input type="hidden" name="_subject" value="Praxis-Sichtbarkeits-Check Anfrage" />
+
+              <div>
+                <label for="lm-name" class="block text-sm font-medium text-[#1a1a1a] mb-2">Name *</label>
+                <input
+                  type="text"
+                  id="lm-name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#52baeb] focus:ring-2 focus:ring-[#52baeb]/20 outline-none transition-all"
+                  placeholder="Max Mustermann"
+                />
+              </div>
+
+              <div>
+                <label for="lm-email" class="block text-sm font-medium text-[#1a1a1a] mb-2">E-Mail *</label>
+                <input
+                  type="email"
+                  id="lm-email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#52baeb] focus:ring-2 focus:ring-[#52baeb]/20 outline-none transition-all"
+                  placeholder="max@firma.de"
+                />
+              </div>
+
+              <div>
+                <label for="lm-website" class="block text-sm font-medium text-[#1a1a1a] mb-2">Website-URL</label>
+                <input
+                  type="url"
+                  id="lm-website"
+                  name="website"
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#52baeb] focus:ring-2 focus:ring-[#52baeb]/20 outline-none transition-all"
+                  placeholder="https://www.ihre-website.de"
+                />
+              </div>
+
+              <div>
+                <label for="lm-problem" class="block text-sm font-medium text-[#1a1a1a] mb-2">Was ist Ihr größtes Problem?</label>
+                <select
+                  id="lm-problem"
+                  name="problem"
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#52baeb] focus:ring-2 focus:ring-[#52baeb]/20 outline-none transition-all bg-white"
+                >
+                  <option value="">Bitte wählen...</option>
+                  <option value="werde-nicht-gefunden">Werde nicht gefunden</option>
+                  <option value="website-veraltet">Website veraltet</option>
+                  <option value="keine-zeit">Keine Zeit für Marketing</option>
+                  <option value="unsicher">Unsicher wo anfangen</option>
+                </select>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="lm-datenschutz"
+                  name="datenschutz"
+                  required
+                  class="mt-1 w-4 h-4 rounded border-slate-300 text-[#52baeb] focus:ring-[#52baeb]"
+                />
+                <label for="lm-datenschutz" class="text-sm text-[#64748b]">
+                  Ich habe die <a href="/datenschutz" class="text-[#1e3a5f] underline hover:text-[#52baeb]">Datenschutzerklärung</a> gelesen
+                  und stimme der Verarbeitung meiner Daten gemäß DSGVO zu. *
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-4 bg-[#52baeb] hover:bg-[#3a9bd1] text-white font-semibold rounded-xl transition-all transform hover:scale-[1.02] shadow-xl shadow-[#52baeb]/25"
+              >
+                Gratis Praxis-Sichtbarkeits-Check anfordern
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-18 lg:py-24 bg-[#faf8f5]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Häufige Fragen</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-6">Was Ärzte uns oft fragen</h2>
+        </div>
+
+        <div class="space-y-4">
+          {faqs.map((faq, index) => (
+            <details class="bg-white rounded-2xl border border-slate-100 overflow-hidden group" name="faq">
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                <span class="font-semibold text-[#1a1a1a] text-lg pr-4">{faq.question}</span>
+                <span class="flex-shrink-0 w-8 h-8 bg-[#1e3a5f] rounded-full flex items-center justify-center transition-transform group-open:rotate-180">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </span>
+              </summary>
+              <div class="px-6 pb-6 text-[#64748b] leading-relaxed">
+                {faq.answer}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-18 lg:py-24 bg-gradient-to-br from-[#1e3a5f] to-[#152d4a]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-5">Sie möchten Ihre Praxis besser präsentieren?</h2>
+        <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+          Dann entwickeln wir gemeinsam einen Auftritt, der Ihre Praxis verständlich macht und Ihre Sichtbarkeit online gezielt verbessert.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#kontakt" class="inline-flex items-center justify-center px-8 py-4 bg-[#52baeb] hover:bg-[#3a9bd1] text-white font-semibold rounded-xl transition-all hover:scale-105 shadow-xl shadow-[#52baeb]/25">
+            Kostenloses Erstgespräch
+          </a>
+          <a href="/leistungen" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all border border-white/20">
+            Alle Leistungen ansehen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'LocalBusiness',
+            '@id': 'https://oberbeck-marketing.de/#localbusiness',
+            name: 'Oberbeck Marketing',
+            description: 'Marketing für Ärzte und medizinische Einrichtungen: Webdesign, Local SEO, Google Ads und Corporate Design.',
+            url: 'https://oberbeck-marketing.de',
+            telephone: '+49 152 28875801',
+            email: 'kontakt@oberbeck-marketing.de',
+            priceRange: '$$',
+            areaServed: [
+              { '@type': 'State', name: 'Rheinland-Pfalz' }
+            ],
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Am Mandelberg 15',
+              addressLocality: 'Laumersheim',
+              postalCode: '67229',
+              addressRegion: 'Rheinland-Pfalz',
+              addressCountry: 'DE'
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: '49.5667',
+              longitude: '8.2167'
+            },
+            openingHoursSpecification: [
+              {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                opens: '09:00',
+                closes: '17:00'
+              }
+            ],
+            sameAs: [
+              'https://www.instagram.com/oberbeckmarketing'
+            ],
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Marketing Leistungen für Ärzte',
+              itemListElement: [
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Webdesign für Praxen' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Local SEO für Praxen' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Ads für Ärzte' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate Design für Praxen' } }
+              ]
+            }
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Warum braucht eine Arztpraxis eine Website?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Weil die meisten Patienten heute online nach Ärzten suchen, bevor sie einen Termin vereinbaren. Eine professionelle Website zeigt Ihre Leistungen, Öffnungszeiten und das Team – und generiert Patientenanfragen rund um die Uhr.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Was kostet Marketing für eine Arztpraxis?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Das hängt von Ihren Zielen ab. Eine Website mit Local SEO beginnt bei einem überschaubaren Budget. Wir finden gemeinsam die passende Lösung für Ihre Praxis.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Können Patienten online Termine buchen?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Ja, absolut. Wir integrieren ein benutzerfreundliches Online-Terminbuchungssystem, über das Patienten rund um die Uhr Termine vereinbaren können – inklusive automatischer Bestätigungen.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Ist meine Website DSGVO-konform?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Ja, wir achten bei jeder Website auf vollständige DSGVO-Konformität – inklusive Datenschutzerklärung, Cookie-Banner und sicherer Datenübertragung.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Wie unterscheidet sich Marketing für Ärzte von anderen Branchen?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Ärzte verkaufen nicht Produkte, sondern Vertrauen, Fachkenntnis und Sicherheit. Ihr Marketing muss daher besonders seriös, vertrauenswürdig und professionell sein – mit Fokus auf Patienteninformationen und Empathie.'
+                }
+              }
+            ]
+          }
+        ]
+      })} />
+  </div>
+
+  <Footer />
+</Layout>
