@@ -47,23 +47,6 @@ const services = [
   }
 ];
 
-const testimonials = [
-  {
-    quote: "Wir haben jahrelang darauf vertraut, dass Kunden uns einfach finden. Aber die meisten Urlauber buchen heute online — und da waren wir fast unsichtbar. Seit dem Relaunch mit lokalem SEO bekommen wir regelmäßig Anfragen aus der Region und darüber hinaus.",
-    author: "Weingut aus der Pfalz",
-    location: "Pfalz"
-  },
-  {
-    quote: "Unsere Speisekarte ist top, aber unsere Website sah aus wie aus einer anderen Zeit. Wir wollten etwas, das die Atmosphäre unseres Lokals transportiert — und das funktioniert jetzt. Die Reservierungen über die Website haben spürbar zugenommen.",
-    author: "Gastronomie-Betrieb aus der Region",
-    location: "Pfalz"
-  },
-  {
-    quote: "Als Handwerksbetrieb war mir Online-Marketing immer suspekt. Aber der regionale Wettbewerb schläft nicht. Mit einer klaren Website und gezieltem Google-Eintrag werden wir jetzt gefunden, wenn jemand in der Pfalz nach unserer Leistung sucht.",
-    author: "Dienstleister aus der Region",
-    location: "Pfalz"
-  }
-];
 
 const faqs = [
   {
@@ -201,38 +184,6 @@ const faqs = [
                   </li>
                 ))}
               </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-18 lg:py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <span class="inline-block text-sm font-semibold text-[#52baeb] uppercase tracking-wider mb-4">Erfahrungen aus der Region</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-6">Was Unternehmer aus Landau in der Pfalz und der Pfalz sagen</h2>
-          <p class="text-lg text-[#64748b]">
-            Fiktive, aber realistische Rückmeldungen — so könnten Betriebe aus unserer Region über ihre Zusammenarbeit sprechen.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {testimonials.map((t) => (
-            <div class="bg-[#faf8f5] rounded-2xl p-8 border border-slate-100 hover:shadow-lg hover:shadow-slate-900/5 transition-all flex flex-col">
-              <div class="mb-6">
-                <svg class="w-8 h-8 text-[#52baeb]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                </svg>
-              </div>
-              <blockquote class="text-[#64748b] leading-relaxed mb-6 flex-grow">
-                {t.quote}
-              </blockquote>
-              <div class="pt-6 border-t border-slate-200">
-                <p class="font-semibold text-[#1a1a1a]">{t.author}</p>
-                <p class="text-sm text-[#64748b]">{t.location}</p>
-              </div>
             </div>
           ))}
         </div>
